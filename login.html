@@ -6,7 +6,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+        font-family: "Raleway", sans-serif;
+        background:linear-gradient(to left, black, white)
+    }
+
+    .center{
+        position: absolute;
+        top:5%;
+        left: 85%;
+        transform: translate(-50%, -50%);
+    }
+    #show-login{
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #222;
+        background: linear-gradient(to right, white, white);
+        border: 4px tomato solid;
+        outline: none; 
+        cursor: pointer;
+        border-radius: 15px;
+        width: 170px;
+        height: 50px;
+
+    }
+    .popup{
+        position: absolute;
+        top: -150%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(1.25);
+        width: 400px;
+        height: 400px;
+        padding: 20px 30px;
+        background: #fff;
+        box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        transition: top 0ms ease-in-out 200ms,
+                    opacity 200ms ease-in-out 0ms,
+                    transform 200ms ease-in-out 0ms;
+    }
+    .popup.active{
+        top: 50%;
+        opacity: 2;
+        transform: translate(-50%, -50%) scale(1);
+        transition: top 0ms ease-in-out 0ms,
+                    opacity 500ms ease-in-out 500ms,
+                    transform 500ms ease-in-out 500ms;
+    }
+    .popup .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 15px;
+        height: 15px;
+        background: #999;
+        color: #eee;
+        text-align: center;
+        line-height: 15px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    .popup.form.h2{
+        text-align: center;
+        color: #222;
+        margin: 10px 0px 20px;
+        font-size: 25px;
+    }
+    .popup .form .form-element label{
+        font-size: 14px;
+        color: #222;
+    }
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"] {
+        margin-top:5px;
+        display: block;
+        width: 90%;
+        padding: 10px;
+        outline: none;
+        border:1px solid #aaa;
+        border-radius: 5px;
+    }
+    .popup .form .form-element input[type="checkbox"]{
+        margin-right: 5px;
+    }
+    .popup .form .form-element button{
+        width: 100%;
+        height: 40px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        background: #222;
+        color: #f5f5f5;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .popup .form .form-element a {
+        display: block;
+        text-align: right;
+        font-size: 15px;
+        color: #1a79ca;
+        text-decoration: none;
+        font-weight: 600;
+    }
+</style>
 <body>
-    <h1>Login page</h1>
+    <div class="center">
+        <button id="show-login">login / SignUp</button>
+    </div>
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>log In / signup</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter your email">
+            </div><br>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+            </div><br>
+            <div class="form-element">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div><br>
+            <div class="form-element">
+                <button>Sign in</button>
+            </div><br>
+            <div class="form-element">
+                <a href="#">Forgot password</a>
+            </div>
+        </div>
+    </div>   
 </body>
 </html>
+
+<script>
+    document.querySelector("#show-login").addEventListener("click", function(){
+        document.querySelector(".popup").classList.add("active");
+    })
+
+    document.querySelector(".popup .close-btn").addEventListener("click",function(){
+        document.querySelector(".popup").classList.remove("active");
+    })
+</script>
