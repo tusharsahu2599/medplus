@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,146 +8,169 @@
     <title>Document</title>
 </head>
 <style>
-    body{
+    body {
         font-family: sans-serif;
-        background:linear-gradient(to left, black, white)
+        background: linear-gradient(to left, black, white)
     }
+
     /* button-position-login */
-    .center{
+    .center {
         position: absolute;
-        top:5%;
+        top: 5%;
         left: 85%;
         transform: translate(-50%, -50%);
     }
+
     /* login-button */
-    #show-login{
+    #show-login {
         padding: 10px 20px;
         font-size: 15px;
         font-weight: 600;
         color: #222;
         background: linear-gradient(to right, white, white);
         border: 4px tomato solid;
-        outline: none; 
+        outline: none;
         cursor: pointer;
         border-radius: 15px;
         width: 170px;
         height: 50px;
 
     }
+
     /* login-page-popup */
-    .popup{
+    .popup {
         position: absolute;
         top: -150%;
         left: 50%;
         opacity: 0;
-        transform: translate(-50%,-50%) scale(1.25);
+        transform: translate(-50%, -50%) scale(1.25);
         width: 400px;
         height: 400px;
         padding: 20px 30px;
         background: #fff;
         box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
-        border-radius: 10px;
-        transition: top 0ms ease-in-out 200ms,
+        border-radius: 5px;
+        /* transition: top 0ms ease-in-out 200ms,
                     opacity 200ms ease-in-out 0ms,
-                    transform 200ms ease-in-out 0ms;
+                    transform 200ms ease-in-out 0ms; */
     }
+
     /* to activate pop-up */
-    .popup.active{
+    .popup.active {
         top: 50%;
         opacity: 2;
         transform: translate(-50%, -50%) scale(1);
         transition: top 0ms ease-in-out 0ms,
-                    opacity 500ms ease-in-out 500ms,
-                    transform 500ms ease-in-out 500ms;
-    } 
+            opacity 500ms ease-in-out 500ms,
+            transform 500ms ease-in-out 500ms;
+    }
+
     /* (x)close-button */
     .popup .close-btn {
         position: absolute;
         top: 10px;
         right: 10px;
         width: 15px;
-        height: 15px;
-        background: #999;
-        color: #eee;
+        height: 20px;
+        /* background: #999; */
+        color: grey;
         text-align: center;
         line-height: 15px;
         border-radius: 15px;
         cursor: pointer;
     }
+
     /* register */
-    .popup .form .h2{
+    .popup .form .h2 {
         text-align: center;
         color: #222;
         margin: 10px 0px 20px;
         font-size: 25px;
     }
+
     /* name-password */
-    .popup .form .form-element label{
+    .popup .form .form-element label {
         font-size: 14px;
         color: #222;
     }
+
     .popup .form .form-element input[type="text"],
     .popup .form .form-element input[type="password"] {
-        margin-top:5px;
+        margin-top: 5px;
         display: block;
         width: 90%;
         padding: 10px;
         outline: none;
-        border:1px solid #aaa;
-        border-radius: 5px;
+        border: 1px solid #aaa;
+        border-radius: none;
     }
-    .popup .form .form-element input[type="checkbox"]{
+
+    .popup .form .form-element input[type="checkbox"] {
         margin-right: 5px;
     }
+
     /* login-button */
-    .popup .form .form-element button{
+    .popup .form .form-element button {
         width: 100%;
         height: 40px;
         border: none;
         outline: none;
         font-size: 15px;
-        background: #222;
+        background: lightpink;
         color: #f5f5f5;
         border-radius: 10px;
         cursor: pointer;
     }
+
     /* href -tag */
     .popup .form .form-element a {
         display: block;
+        margin-right: 30px;
         text-align: right;
-        font-size: 15px;
+        font-size: 10px;
         color: #1a79ca;
         text-decoration: none;
         font-weight: 600;
     }
+
+    .popup .form .form-element .otp {
+        display: block;
+        margin-right: 30px;
+        text-align: left;
+        font-size: 10px;
+        color: #1a79ca;
+        text-decoration: none;
+        margin-top: -10px;
+        /* font-weight: 600; */
+    }
+
     /* signin/////////////////////////////////////////////////////////////////////////////////// */
 
-        /* login-page-popup */
-        .popup2{
+    /* login-page-popup */
+    .popup2 {
         position: absolute;
         top: -150%;
         left: 50%;
         opacity: 0;
-        transform: translate(-50%,-50%) scale(1.25);
+        transform: translate(-50%, -50%) scale(1.25);
         width: 400px;
-        height: 400px;
+        height: 500px;
         padding: 20px 30px;
         background: #fff;
         box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
-        border-radius: 10px;
-        transition: top 0ms ease-in-out 200ms,
-                    opacity 200ms ease-in-out 0ms,
-                    transform 200ms ease-in-out 0ms;
+        border-radius: 5px;
     }
+
     /* to activate pop-up */
-    .popup2.active{
+    .popup2.active {
         top: 50%;
         opacity: 2;
         transform: translate(-50%, -50%) scale(1);
         transition: top 0ms ease-in-out 0ms,
-                    opacity 100ms ease-in-out 500ms,
-                    transform 100ms ease-in-out 500ms;
-    } 
+            opacity 100ms ease-in-out 500ms,
+            transform 100ms ease-in-out 500ms;
+    }
+
     /* (x)close-button */
     .popup2 .close-btn {
         position: absolute;
@@ -154,52 +178,60 @@
         right: 10px;
         width: 15px;
         height: 15px;
-        background: #999;
-        color: #eee;
+        /* background: #999; */
+        color: grey;
         text-align: center;
         line-height: 15px;
         border-radius: 15px;
         cursor: pointer;
     }
+
     /* register */
-    .popup2 .form .h2{
+    .popup2 .form .h2 {
         text-align: center;
         color: #222;
         margin: 10px 0px 20px;
         font-size: 25px;
     }
+
     /* name-password */
-    .popup2 .form .form-element label{
+    .popup2 .form .form-element label {
         font-size: 14px;
         color: #222;
     }
+
     .popup2 .form .form-element input[type="text"],
     .popup2 .form .form-element input[type="password"] {
-        margin-top:5px;
+        margin-top: 5px;
+        margin-left: 15px;
         display: block;
-        width: 90%;
+        width: 40%;
         padding: 10px;
         outline: none;
-        border:1px solid #aaa;
-        border-radius: 5px;
+        border: 1px solid #aaa;
+        border-radius: 0px;
     }
-    .popup2 .form .form-element input[type="checkbox"]{
+
+    .popup2 .form .form-element input[type="checkbox"] {
         margin-right: 5px;
     }
+
     /* login-button */
-    .popup2 .form .form-element button{
-        width: 100%;
-        height: 40px;
+    .popup2 .form .form-element button {
+        width: 45%;
+        height: 30px;
         border: none;
         outline: none;
         font-size: 15px;
-        background: #222;
+        background: lightpink;
         color: #f5f5f5;
-        border-radius: 10px;
+        border-radius: 3px;
+        margin-left: 17px;
         cursor: pointer;
     }
+
     /* href -tag */
-    .popup2 .form .form-element a {
+    .popup2 .form .form-element .pass {
         display: block;
         text-align: right;
         font-size: 15px;
@@ -207,8 +239,43 @@
         text-decoration: none;
         font-weight: 600;
     }
-    
+
+    .popup p {
+        line-height: 3px;
+        font-size: 12px;
+        margin-top: -7px;
+    }
+
+    #signup {
+        color: lightcoral;
+        text-align: center;
+        margin-top: -21px;
+        margin-right: 45px;
+        font-size: 12px;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .msg {
+        color: grey;
+        font-size: 12px;
+    }
+    .pl{
+        text-align: left;
+        font-size: 12px;
+    }
+    .pr{
+        text-align: right;
+        font-size: 12px;
+        margin-left: 20px; 
+    }
+    span{
+        font-size: 12px;
+    }
 </style>
+
 <body>
     <div class="center">
         <button id="show-login">login / SignUp</button>
@@ -216,69 +283,90 @@
     <div class="popup">
         <div class="close-btn">&times;</div>
         <div class="form">
-            <h2>log In</h2>
+            <h5>Hello User,</h5>
+            <h2>Welcome to MedPlusMart</h2>
+            <p class="msg">Login with your registered mail id or phone number</p>
+            <br>
             <div class="form-element">
-                <label for="email">Email</label>
-                <input type="text" id="email" placeholder="Enter your email">
+                <!-- <label for="email">Email</label> -->
+                <input type="text" id="email" placeholder="Email Id / Mobile No."><br>
             </div><br>
             <div class="form-element">
-                <label for="password">Password</label>
+                <!-- <label for="password">Password</label> -->
                 <input type="password" id="password" placeholder="Enter password">
             </div><br>
-            <div class="form-element">
+            <!-- <div class="form-element">
                 <input type="checkbox" id="remember-me">
                 <label for="remember-me">Remember me</label>
-            </div><br>
+            </div><br> -->
+            <div class="form-element b">
+                <a href="#" class="pass">Forgot password</a>
+                <a href="#" class="otp">Login with Otp</a>
+            </div>
+            <br>
             <div class="form-element">
                 <button>Sign in</button>
             </div><br>
             <div class="form-element">
-                <a href="#">Forgot password</a>
                 <br>
-                <a href="#" id="signup">Sign up</a>
+                <p>Need to medPlus Mart?</p> <a href="#" id="signup">Sign up</a>
             </div>
         </div>
-    </div>   
+    </div>
     <div class="popup2">
         <div class="close-btn">&times;</div>
         <div class="form">
-            <h2>signup</h2>
-            <div class="form-element">
-                <label for="email">Email</label>
-                <input type="text" id="email" placeholder="Enter your email">
+            <h5>Hello User,</h5>
+            <h2>Welcome to MedPlusMart</h2>
+            <p class="msg">Login with your registered mail id or phone number</p>
+            <br>
+            <div class="form-element flex">
+                <!-- <label for="email">Email</label> -->
+                <input type="text" id="name" placeholder="Enter First name">
+                <input type="text" id="sname" placeholder="Enter Last name">
             </div><br>
-            <div class="form-element">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter password">
+            <div class="form-element flex">
+                <!-- <label for="password">Password</label> -->
+                <input type="text" id="email" placeholder="Enter email">
+                <input type="text" id="mobile" placeholder="Enter mobile no">
             </div><br>
-            <div class="form-element">
+            <div class="form-element flex">
+                <!-- <label for="password">Password</label> -->
+                <input type="text" id="email" placeholder="Enter pass">
+                <input type="text" id="mobile" placeholder="Enter confirm pass">
+            </div><br>
+            <div class="form-element flex">
                 <input type="checkbox" id="remember-me">
-                <label for="remember-me">Remember me</label>
+                <label for="remember-me"><span>I would like to be updated of new promotional offers.</span></label>
             </div><br>
             <div class="form-element">
                 <button>Sign in</button>
             </div><br>
-            <div class="form-element">
-                <input type="checkbox" id="">
+            <div class="form-element flex">
+                <p class="pl">By Signing up you agree to our</p><br><br>
+                <a href="#">T&C</a>
+                <p class="pr">Existing user of MedPlus?</p><br><br>
+                <a href="#">Login</a>
             </div>
         </div>
-    </div>   
+    </div>
 </body>
+
 </html>
 
 <script>
-    document.querySelector("#show-login").addEventListener("click", function(){
+    document.querySelector("#show-login").addEventListener("click", function () {
         document.querySelector(".popup").classList.add("active");
     })
 
-    document.querySelector(".popup .close-btn").addEventListener("click",function(){
+    document.querySelector(".popup .close-btn").addEventListener("click", function () {
         document.querySelector(".popup").classList.remove("active");
     })
-    document.querySelector("#signup").addEventListener("click", function(){
+    document.querySelector("#signup").addEventListener("click", function () {
         document.querySelector(".popup2").classList.add("active");
     })
 
-    document.querySelector(".popup2 .close-btn").addEventListener("click",function(){
+    document.querySelector(".popup2 .close-btn").addEventListener("click", function () {
         document.querySelector(".popup2").classList.remove("active");
         document.querySelector(".popup").classList.remove("active");
     })
