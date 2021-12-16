@@ -60,6 +60,7 @@ i{
     top: 0;
     background: white;
     width: 100%;
+    padding-top: 10px;
 }
 #searchbar{
     border: 1px solid gray;
@@ -244,6 +245,88 @@ i{
     margin-left: 4px;
     font-weight: 400;
 }
+#health{
+    margin: 16px;
+    width: 98%;
+}
+#downloadbox{
+    display: flex;
+    /* grid-template-columns: 100%;
+    grid-template-rows: 50%;
+    width: 98%; */
+    height: 450px;
+    grid-gap: 0px;
+    margin: 16px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+#mobile{
+   border: black 1px transparent;
+    width: 45%;
+    
+    
+}
+#mobile+img:hover{
+    border: black 1px transparent;
+    cursor: pointer;
+  
+    
+    /* margin-left: 20px; */
+}
+#contact{
+    display: flex;
+    margin: 15px;
+    line-height: 8px;
+    border: 1px transparent darkblue;
+}
+#contact>img+div{
+    padding-top: 15px;
+    margin: 16px;
+    border: darkblue 1px transparent;
+}
+#num:hover{
+     color: crimson;
+     cursor: pointer;
+     font-size: 19px;
+}
+#contact>img+div+div{
+
+    margin-left: 40%;
+}
+
+#input{
+    height: 40px;
+   margin-left: 20px;
+    width: 30%;
+}
+#input>input{
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+#input+button{
+    background: crimson;
+}
+#input+button:hover{
+    background: white;
+    color: crimson;
+    border:  1px grey solid;
+    cursor: pointer;
+}
+#aboutus{
+    color:rgb(48, 48, 236);
+    display:flex;
+    margin: 5px;
+}
+#aboutus>p{
+    margin: 15px;
+    font-weight: 500;
+}
+#aboutus>p:hover{
+    cursor: pointer;
+}
+#aboutus>img{
+    margin-left: 17%;
+}
     </style>
       <script src="https://kit.fontawesome.com/dea4d8f016.js" crossorigin="anonymous"></script>
   
@@ -379,5 +462,41 @@ i{
             </div>
         </div>
     </div>
+    <img id="health" src="https://static2.medplusmart.com/live/bannerImage/Mart/4201da37be56c796baa9c847f1aef982.jpg"> 
+    <div id="downloadbox">
+        <img id="mobile" src="https://static1.medplusmart.com/medplusmart/assets/_3649eddcab909706a1c11a0b62ddd161_/new_theme/web/images/new/download-app.png" alt="">
+        <img id="download" src="download.png">
+    </div>
+     <div id="contact">
+    <img src="https://static1.medplusmart.com/medplusmart/assets/_a34d265f3ea369c0259f6cf98563a642_/new_theme/web/images/call.svg" alt="">
+    <div>
+    <span<p>Need any help?</p></span>
+    <p id="num">040-67006700</p>
+    </div>
+    <div id="subscribe">
+        <p>Subscribe for</p>
+        <h3>Latest Offers</h3>
+    </div>
+    <div id="input">
+        <input type="text" placeholder="Your email address here">
+        <hr>
+    </div>
+    <button>SUBSCRIBE</button>
+    </div>
+    <div id="aboutus">
+        <p>About Us </p>
+        <p>FAQs </p>
+        <p> Locate A MedPlus Store</p>
+        <p>Track Orders</p>
+        <p> Browse All Brands</p>
+        <p>Customer Feedback</p>
+        <p>  Community Delivery</p>
+        <p> Bulk Order</p>
+        <p> Contact Us</p>
+        <img src="https://www.medplusmart.com/new_theme/web/images/xsiteseal_gd_3_h_l_m.png.pagespeed.ic.UUaIsQTtFt.webp">
+     
+    </div>
+    <hr>
+    <img src="payment.png">
 </body>
 </html>
