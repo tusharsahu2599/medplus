@@ -430,13 +430,15 @@
         var email = document.querySelector("#lemail").value;
         var password = document.querySelector("#lpass").value;
 
+        if(email =="" || password==""){
+            window.alert("Please enter your email and password")
+        }
+        else{
         for(var i=0; i<users.length; i++){
             if(users[i].Addemail==email && users[i].Addpass == password){
                 console.log("Registerd users");
                 window.location.href = "homepage.html"
-            }
-            else{
-                window.alert("Please signup first");
+                }
             }
         }
     }
