@@ -36,11 +36,12 @@
         height: 50px;
 
     }
-    .center button:hover{
+
+    .center button:hover {
         border: tomato 3px solid;
         background: lightcoral;
         color: white;
-       
+
     }
 
     /* login-page-popup */
@@ -268,21 +269,25 @@
         color: grey;
         font-size: 12px;
     }
-    .pl{
+
+    .pl {
         text-align: left;
         font-size: 12px;
     }
-    .pr{
+
+    .pr {
         text-align: right;
         font-size: 12px;
-        margin-left: 20px; 
+        margin-left: 20px;
     }
-    span{
+
+    span {
         font-size: 12px;
     }
+
     .popup2 .form .form-element a {
         display: block;
-        
+
         text-align: center;
         color: lightcoral;
         font-size: 14px;
@@ -290,7 +295,8 @@
         margin-top: 12px;
         font-weight: 600;
     }
-    .sp{
+
+    .sp {
         color: lightcoral;
         font-size: 14px;
         text-align: center;
@@ -362,9 +368,11 @@
             </div><br>
             <div class="form-element flex">
                 <p class="pl">By Signing up you agree to our <br>
-                <span class="sp"><a href="#">T&C</a></span></p>
+                    <span class="sp"><a href="#">T&C</a></span>
+                </p>
                 <p class="pr">Existing user of MedPlus? <br>
-                <span class="sp" id="sp1" onclick=""><a href="#">Login</a></span></p>
+                    <span class="sp" id="sp1" onclick=""><a href="#">Login</a></span>
+                </p>
             </div>
         </div>
     </div>
@@ -374,7 +382,7 @@
 
 <script>
 
-// login-popup 
+    // login-popup 
 
     document.querySelector("#show-login").addEventListener("click", function () {
         document.querySelector(".popup").classList.add("active");
@@ -383,7 +391,7 @@
     document.querySelector(".popup .close-btn").addEventListener("click", function () {
         document.querySelector(".popup").classList.remove("active");
     })
- 
+
     // signup-popup 
 
     document.querySelector("#signup").addEventListener("click", function () {
@@ -395,53 +403,58 @@
         document.querySelector(".popup").classList.remove("active");
     })
 
-// Registration-script 
+    // Registration-script 
 
-    document.querySelector("#register").addEventListener("click",Register)
+    document.querySelector("#register").addEventListener("click", Register)
     // var userData = [];
-    var userData =  JSON.parse(localStorage.getItem("medPlusDatabase")) || []; 
-    function Register(){
+    var userData = JSON.parse(localStorage.getItem("medPlusDatabase")) || [];
+    function Register() {
         var name = document.querySelector("#name").value;
         var surname = document.querySelector("#sname").value;
         var email = document.querySelector("#email").value;
         var mobile = document.querySelector("#mobile").value;
         var password = document.querySelector("#pass").value;
         var cpassword = document.querySelector("#cpass").value;
+        
+        if (name == "" || surname == "" || email == "" || mobile == "" || password == "" || cpassword == "") {
+            window.alert("Please enter the all the field");
+        }
 
-
-        var userCard = {
-            Addname :name,
-            Addsurname : surname,
-            Addemail : email,
-            Addmobile : mobile,
-            Addpass : password,
-            Addcpass : cpassword
-        };
-        userData.push(userCard);
-        localStorage.setItem("medPlusDatabase", JSON.stringify(userData))
-        console.log(userData)
+        else {
+            var userCard = {
+                Addname: name,
+                Addsurname: surname,
+                Addemail: email,
+                Addmobile: mobile,
+                Addpass: password,
+                Addcpass: cpassword
+            };
+            userData.push(userCard);
+            localStorage.setItem("medPlusDatabase", JSON.stringify(userData))
+            console.log(userData)
+        }
     }
 
-// login-script 
+    // login-script 
 
     document.querySelector("#login").addEventListener("click", login)
-    var users =  JSON.parse(localStorage.getItem("medPlusDatabase"));
-    function login(){
+    var users = JSON.parse(localStorage.getItem("medPlusDatabase"));
+    function login() {
         var email = document.querySelector("#lemail").value;
         var password = document.querySelector("#lpass").value;
 
-        if(email =="" || password==""){
+        if (email == "" || password == "") {
             window.alert("Please enter your email and password")
         }
-        else{
-        for(var i=0; i<users.length; i++){
-            if(users[i].Addemail==email && users[i].Addpass == password){
-                console.log("Registerd users");
-                window.location.href = "homepage.html"
+        else {
+            for (var i = 0; i < users.length; i++) {
+                if (users[i].Addemail == email && users[i].Addpass == password) {
+                    console.log("Registerd users");
+                    window.location.href = "homepage.html"
                 }
             }
         }
     }
-    localStorage.removeItem(0);
+    // localStorage.removeItem(0);
 
 </script>
