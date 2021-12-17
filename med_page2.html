@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MEDPLUS clone</title>
     <style>
         body{
     font-family: sans-serif;
 }
+/* *{
+    margin: 0;
+    padding: 0;
+} */
 #nav1{
     display: flex;
     border: 1px transparent grey;
@@ -26,18 +30,19 @@ button{
     border: 0;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 #number{
     margin-left: 45%;
-    font-size: small;
+    font-size: 14px;
 }
 #store{
     margin-left: 3%;
-    font-size: small;
+    font-size: 14px;
 }
 #download{
     margin-left: 3%;
-    font-size: small;
+    font-size: 14px;
 }
 i{
     margin: 14px;
@@ -67,13 +72,13 @@ i{
     width: 700px;
     height: 45px;
     margin-left: 30px;
-    background: rgb(240, 237, 237);
+    background: rgba(255, 255, 255, 0.049);
     border-radius: 10px;
 }
 #option{
   border: 0;
   margin-left: 10px;
-  background: rgb(240, 237, 237);
+  background: rgb(255, 253, 253);
 }
 #search{
     border: 0;
@@ -81,14 +86,15 @@ i{
     width: 500px;
     height: 23px;
     margin-top: 0px;
-    background: rgb(240, 237, 237);
+    background: rgb(255, 253, 253);
 }
 #upload{
     background: #50dce7;
     color: black;
     margin-left: 30px;
-    margin-right: 160px;
-    height: 40px;
+    margin-right: 18%;
+    height: 50px;
+    margin-top: 0;
 }
 #cart,#bell{
     margin-right: 50px;
@@ -116,8 +122,8 @@ i{
    line-height: 0px;
 }
 #image1{
-    width: 98%;
-    height: 200px;
+    width: 99%;
+    height: 250px;
     margin: 10px;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
@@ -327,6 +333,34 @@ i{
 #aboutus>img{
     margin-left: 17%;
 }
+#info{
+    width: 100%;
+}
+#footer{
+    display: grid;
+    /* width: 100%; */
+    height: 60px;
+    /* margin: 0; */
+    grid-template-columns: repeat(6,16%);
+    background: #343a40;
+    /* border: 1px solid green; */
+}
+#footer>div{
+    margin-top: 10px;
+    display: flex;
+    color: white;
+    margin-left: 10px;
+
+}
+#footer>div>img{
+    margin-right: 7px;
+}
+#nav2>img{
+    border-radius: 50%;
+    height: 50px;
+    width: 60px;
+    margin-right: 10px;
+}
     </style>
       <script src="https://kit.fontawesome.com/dea4d8f016.js" crossorigin="anonymous"></script>
   
@@ -346,7 +380,8 @@ i{
     </div>
     <hr>
     <div id="nav2">
-        <i class="fas fa-map-marker-alt"></i>
+        <!-- <i class="fas fa-map-marker-alt"></i> -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF8Fp_gXH33INwcJxL6Zja5AUrObDGJwYL3g&usqp=CAU">
          <div id="address">
             <p>6/56,bhavani nagar,Hyderabad</p>
             <p>Home Delivery & Store Pickup Available</p>
@@ -498,5 +533,34 @@ i{
     </div>
     <hr>
     <img src="payment.png">
+    <img id="info" src="desc.png">
+    <img id="info" src="followus.png">
+    <div id="footer">
+        <div>
+            <img src="https://static1.medplusmart.com/medplusmart/assets/_7ce28e4d38d5831f8b79ccb074f7efda_/new_theme/web/images/new/bulk-order.svg">
+            <p>Bulk Order</p>
+        </div>
+        <div>
+            <img src="https://static1.medplusmart.com/medplusmart/assets/_3f6749457ccb366054e8b4730031d82a_/new_theme/web/images/new/footer-community.svg">
+            <p>Community Delivery</p>
+        </div>
+        <div>
+            <img src="https://static1.medplusmart.com/medplusmart/assets/_ece1fc48e014048f8d5cdf497e01b7d4_/new_theme/web/images/new/sitemap.svg">
+            <p>Sitemap</p> 
+        </div>
+        <div>
+            <img src="https://static1.medplusmart.com/medplusmart/assets/_9e669b497a0681ed24b8d7ba7e1b8378_/new_theme/web/images/new/privacy.svg">
+            <p>Privacy</p> 
+
+        </div>
+        <div>
+            <img src="https://static1.medplusmart.com/medplusmart/assets/_648114a464440ed20580b10c930debe7_/new_theme/web/images/new/footer-return.svg">
+            <p>Returns & Cancellations</p> 
+        </div>
+        <div> 
+            <img src="https://static1.medplusmart.com/medplusmart/assets/_18e40d90e742b9eb3da83bf859391a34_/new_theme/web/images/new/footer-term.svg">
+            <p>Terms & Conditions</p> 
+        </div>
+    </div>
 </body>
 </html>
