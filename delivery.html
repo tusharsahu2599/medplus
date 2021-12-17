@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
     <style>
   #shopping{
      
       width:100%;
       height: 800px;
+      
 
 }
 #topdiv{
    
    width:100%;
    height:50px;
+   justify-content: space-between;
  
   
 }
 #medicon{
-    border:1px solid green;
+   
+    
     width:10%;
     height:25px;
     margin-left:20px;
@@ -26,29 +32,40 @@
     border-radius: 7px;
     font-size: 20px;
     text-align: center;
-   
+    padding:5px;
     margin-top: 5px;
 
 }
 div>div{
     display:flex;
-    justify-content: space-between;
+    
 }
 #person{
     
     margin-right: 10px;
 }
-#count{
+#count,#countd{
     border-radius: 50%;
     margin-right: 10px;
     border: none;
+    background-color: grey;
 }
-button:hover{
+#countd{
     background-color: green;
     color:white;
 }
+#countf,#counte{
+    border-radius: 50%;
+    margin-right: 10px;
+    border: none;
+    background-color:rgb(199, 193, 193);
+    color:white;
+}
+
 .common{
-    padding:10px;
+    font-size: 17px;
+    padding:8px;
+    margin-right: 20px;
 }
 #change{
     margin-right:40px;
@@ -68,12 +85,13 @@ button:hover{
    box-shadow:  2px 1px 2px  #888888;
 
 }
+
 #thirdiv{
    
     width:85%;
-    height:70%;
+    height:450px;
     margin: auto;
-   border: 1px solid red;
+  
     
 }
 #thirdiv{
@@ -82,9 +100,8 @@ button:hover{
 }
 #product{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-    width:45%;
-    height:70%;
+    width:30%;
+    height:100%;
    
 }
 #thirdiv>div{
@@ -92,18 +109,19 @@ button:hover{
 }
 #offer{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
-    width:45%;
-    height:60%;
+    width:55%;
+    height:90%;
+    margin-left: 20px;
     
 }
 #homedel{
- border-bottom:1px solid grey;
+    border-bottom:1px solid rgb(139, 136, 136);
     width:95%;
     height:40px;
     font-size: 19px;
     font-style:normal;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+  
    margin-top: 10px;
    padding-left: 12px;
 }
@@ -112,15 +130,15 @@ button:hover{
     width:50%;
     height:40px;
     font-weight: bold;
-    font-size: 21px;
+    font-size: 18px;
     text-align: center;
     padding:12px;
     
 }
 #door:hover{
     background-color: transparent;
-    color:rgb(192,81,115);
-    border: 4px solid  rgb(192,81,115);
+    color:rgb(209,46,46);
+    border: 4px solid  rgb(209,46,46);
 }
 #typeadd{
 
@@ -141,26 +159,26 @@ button:hover{
 }
 #addaddres{
    
-    background-color: rgb(192,81,115);
+    background-color: rgb(209,46,46);
     color :white;
     padding :10px;
     border-radius: 5px;
     border:none;
     margin-top: 30px;
-    margin-left: 120px;
+    margin-left: 60px;
     font-weight: bold;
     font-size: 20px;
 }
 #addaddres:hover{
-    background-color:rgb(226, 124, 226);
+    background-color: brown;
 }
 #pickup{
     background-color: tomato;
 }
 #offer{
     display:block;
-    width:50%;
-    height:70%;
+    width:71%;
+    height:100%;
 }
 #yourlast{
    
@@ -188,6 +206,7 @@ button:hover{
    
 }
 #radio{
+   
     margin-top: 40px;
    width:2.50em;
    height:1.25em;
@@ -207,13 +226,79 @@ button:hover{
  #locimg{
      margin-top:30px;
  }
- #pageinfo{
-     width:100%;
-     border:1px solid green;
-     height:50px;
-     justify-content: end;
-     margin-left: 20px;
+ #storeadd{
+     border:1px solid gray;
+     width:30%;
+     height:35%;
  }
+#shopAdd{
+    border:1px solid rgb(185, 183, 183);
+    width:53%;
+    height:210px;
+    margin-left: 20px;
+
+}
+#shopAdd:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+    margin-top: 10px;
+}
+#fourdiv{
+    
+    width:85%;
+    height:90px;
+    margin:auto;
+    background-color: transparent linear-gradient(
+270deg,#fff,#eaffff) 0 0 no-repeat padding-box;
+    margin-top: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+    display: flex;
+    align-items: center; 
+    font-size: 0.78rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0.125rem 0.25rem rgb(8 8 8 / 8%);
+    border-radius: 0.25rem;
+    background: transparent linear-gradient(
+     270deg,rgb(240, 247, 248),#b8f8f8) 0 0 no-repeat padding-box;
+}
+#note{
+    display: block;
+    line-height: 2px;
+}
+.footer{
+    border:1px solid gray;
+    width:100%;
+    height:30%;
+    background-color: #fff;
+    box-shadow: 0 -0.125rem 0.25rem rgb(8 8 8 / 15%);
+    text-align: center;
+    margin-top: auto !important;
+    
+}
+
+.btnlook{
+    border:1px solid rgb(209,46,46);
+    width:17%;
+    height:27px;
+    color: rgb(209,46,46);
+    border-radius: 5px;
+    text-align: center;
+    
+    
+   
+}
+.btnlook:hover{
+    background-color: rgb(209,46,46);
+   color:white;
+   
+}
+.footer>.btnlook{
+  display: inline-flex;
+  font-size: 20px;
+ margin-left: auto;
+  padding: 5px;
+  justify-content:center;
+}
     </style>
   
 </head>
@@ -222,7 +307,8 @@ button:hover{
        <div id ="topdiv">
            <div id = "medicon"><B>MedPlusmart</B></div>
            <div>
-               <div class = "common"><b>Khushi Gupta</b></div>
+               <div class = "common"><b>Your Nme</b></div>
+               <!-- we have to add acoount holder name  -->
                <div id = "person">
                    <img  class = "common" src= "https://t4.ftcdn.net/jpg/02/29/75/83/240_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" 
                    width=80%;
@@ -241,17 +327,15 @@ button:hover{
                   <div style=  "margin-right:30px"><p>6/56, Bhavani Nagar, Moosapet, Hyderabad, Telangana 500018, India
                    </p></div> 
                
-               <div>
-                   <button id = "change">Change</button>
-               </div>
+               
             </div>
                <div class = "common"><button id = "count">1</button>
                     Shopping Cart</div>
-                    <div class = "common"><button id = "count">2</button>
+                    <div class = "common"><button id = "countd">2</button>
                     Delivery Details</div>
-                    <div class = "common"><button id = "count">3</button>
+                    <div class = "common"><button id = "counte">3</button>
                         Promotions & Review</div>
-                        <div class = "common"><button id = "count">4</button>
+                        <div class = "common"><button id = "countf">4</button>
                             Payment</div>
            </div>
         <div id = "thirdiv">
@@ -268,7 +352,7 @@ button:hover{
                     height=70px;
                     alt="locate;"/>
                    </div> 
-                   <div id = "noaddres" ><h3>No Addresss Added<br>
+                   <div id = "noaddres" ><h4>No Addresss Added<br>
                Please add a address to Home Delivery</h2>
               </div>
               <button id="addaddres" >Add new Address</button>
@@ -279,11 +363,13 @@ button:hover{
         
             <div id = "offer">
                 <div id ="homedel" >Pick from Medplus Store</div>
-                <div id ="yourlast" >
-                    <div id = "greenbtn">Your last Selected store</div>
-                    <div >
+               <div style = "margin-left: 10px;"><h3>Nearby Stores</h3><P>  (Stores Based on locality Selected)</P></div>
+               <div id = "shopAdd">
+
+
+                <div >
                     <input id = "radio" type = "radio" />
-                <div id = "medad" ><H2>MEDPLUS BALANGAR HYDRABAD</H2><p>M-No.11-6/56/NR,Sr-257 and 258/1-OPP-Ipp Railway Sliding Moosapet raangadiry Cir disty</p>
+                <div id = "medad" ><H4>MEDPLUS BALANGAR HYDRABAD</H4><p>M-No.11-6/56/NR,Sr-257 and 258/1-OPP-Ipp Railway Sliding Moosapet raangadiry Cir disty</p>
                     <img src= "https://cdn-icons-png.flaticon.com/128/126/126341.png"
                     width=5%;
                     height=20px;
@@ -295,24 +381,47 @@ button:hover{
                     alt="direction"/>
 <a>3Km/hr</a>
 <img  style = "margin-left : 10px;"src= "https://cdn-icons.flaticon.com/png/128/5869/premium/5869227.png?token=exp=1639642719~hmac=23e7e6607dccf4fe0585919f8e91b9a0"
+
 width=5%;
 height= 20px;
 alt="get direction"/>
+<!-- we have to add a page of phone no. -->
 <a href="https://www.example.com">Get Direction</a>
                </div>
-               
-                </div>
-                </div>        
-                </div>
-           
-            </div>
-            <div id = "pageinfo">
-                <button id = "change">Back</button>
-                <!-- on click shopping cart page should appear -->
-                <button id = "change">Continue</button>
-                <!-- on continue payment page should appear -->
-            </div>
-        </div>
-   </div> 
+              
+               </div>        
+            </div> 
+        </div> 
+    </div> 
+ <div id = "fourdiv">
+     <div id = "note">
+         <img src= "https://cdn-icons-png.flaticon.com/128/0/472.png"
+         width=45%;
+         height= 20px;
+         alt="note symbol"/>
+   <div>
+        <h2>Note:</h2></div>
+    </div>
+
+
+
+     <div id = "content">
+         <ul>
+            <li>Prices of products may vary slightly based on batch. Final prices will be displayed prior to payment confirmation.</li>
+           <li> Statutory regulations mandate a valid rescription for buying prescription medicines. The user agrees to upload a copy or show the prescription to the store assistant prior to store pickup.</li>
+           <li> No delivery charges for community orders.</li>
+         </ul>
+     </div>
+    
+ </div>
+
+ <footer class = "footer featurefooter">
+     <div class = "btnlook">Back</div>
+     <!-- we have to link th shopping cart page  -->
+     <div class = "btnlook">Proceed</div>
+     <!-- we have to add payment page with proceed -->
+ </footer>
+</div>
 </body>
+
 </html>
