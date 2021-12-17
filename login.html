@@ -22,13 +22,13 @@
     }
 
     /* login-button */
-    #show-login {
+    .center button {
         padding: 10px 20px;
         font-size: 15px;
         font-weight: 600;
         color: #222;
         background: linear-gradient(to right, white, white);
-        border: 4px tomato solid;
+        border: 4px tomato dotted;
         outline: none;
         cursor: pointer;
         border-radius: 15px;
@@ -274,14 +274,21 @@
     span{
         font-size: 12px;
     }
-    .popup .form .form-element a {
+    .popup2 .form .form-element a {
         display: block;
-        margin-right: 30px;
+        
         text-align: right;
         font-size: 10px;
         color: #1a79ca;
         text-decoration: none;
+        margin-top: 12px;
         font-weight: 600;
+    }
+    .sp{
+        color: lightcoral;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
     }
 </style>
 
@@ -290,7 +297,7 @@
         <button id="show-login">login / SignUp</button>
     </div>
     <div class="popup">
-        <div class="close-btn">&times;</div>
+        <div class="close-btn">&#935;</div>
         <div class="form">
             <h5>Hello User,</h5>
             <h2>Welcome to MedPlusMart</h2>
@@ -298,23 +305,19 @@
             <br>
             <div class="form-element">
                 <!-- <label for="email">Email</label> -->
-                <input type="text" id="email" placeholder="Email Id / Mobile No."><br>
+                <input type="text" id="lemail" placeholder="Email Id / Mobile No."><br>
             </div><br>
             <div class="form-element">
                 <!-- <label for="password">Password</label> -->
-                <input type="password" id="password" placeholder="Enter password">
+                <input type="password" id="lpass" placeholder="Enter password">
             </div><br>
-            <!-- <div class="form-element">
-                <input type="checkbox" id="remember-me">
-                <label for="remember-me">Remember me</label>
-            </div><br> -->
             <div class="form-element b">
                 <a href="#" class="pass">Forgot password</a>
                 <a href="#" class="otp">Login with Otp</a>
             </div>
             <br>
             <div class="form-element">
-                <button>Sign in</button>
+                <button id="login">Sign in</button>
             </div><br>
             <div class="form-element">
                 <br>
@@ -331,31 +334,31 @@
             <br>
             <div class="form-element flex">
                 <!-- <label for="email">Email</label> -->
-                <input type="text" id="name" placeholder="Enter First name">
-                <input type="text" id="sname" placeholder="Enter Last name">
+                <input type="text" id="name" placeholder="Enter First name" required>
+                <input type="text" id="sname" placeholder="Enter Last name" required>
+            </div><br>
+            <div class="form-element flex">
+                <!-- <label for="email">mobile</label> -->
+                <input type="text" id="email" placeholder="Enter email" required>
+                <input type="text" id="mobile" placeholder="Enter mobile no" required>
             </div><br>
             <div class="form-element flex">
                 <!-- <label for="password">Password</label> -->
-                <input type="text" id="email" placeholder="Enter email">
-                <input type="text" id="mobile" placeholder="Enter mobile no">
+                <input type="text" id="pass" placeholder="Enter pass" required>
+                <input type="text" id="cpass" placeholder="Enter confirm pass" required>
             </div><br>
             <div class="form-element flex">
-                <!-- <label for="password">Password</label> -->
-                <input type="text" id="email" placeholder="Enter pass">
-                <input type="text" id="mobile" placeholder="Enter confirm pass">
-            </div><br>
-            <div class="form-element flex">
-                <input type="checkbox" id="remember-me">
+                <input type="checkbox" id="remember-me" aria-required="true">
                 <label for="remember-me"><span>I would like to be updated of new promotional offers.</span></label>
             </div><br>
             <div class="form-element">
-                <button>Register</button>
+                <button id="register">Register</button>
             </div><br>
             <div class="form-element flex">
-                <p class="pl">By Signing up you agree to our</p><br><br>
-                <a href="#">T&C</a>
-                <p class="pr">Existing user of MedPlus?</p><br><br>
-                <a href="#">Login</a>
+                <p class="pl">By Signing up you agree to our <br>
+                <span class="sp">T&C</span></p>
+                <p class="pr">Existing user of MedPlus? <br>
+                <span class="sp" id="sp1">Login</span></p>
             </div>
         </div>
     </div>
@@ -364,6 +367,9 @@
 </html>
 
 <script>
+
+// login-popup 
+
     document.querySelector("#show-login").addEventListener("click", function () {
         document.querySelector(".popup").classList.add("active");
     })
@@ -371,6 +377,9 @@
     document.querySelector(".popup .close-btn").addEventListener("click", function () {
         document.querySelector(".popup").classList.remove("active");
     })
+ 
+    // signup-popup 
+
     document.querySelector("#signup").addEventListener("click", function () {
         document.querySelector(".popup2").classList.add("active");
     })
@@ -379,4 +388,50 @@
         document.querySelector(".popup2").classList.remove("active");
         document.querySelector(".popup").classList.remove("active");
     })
+
+// Registration-script 
+
+    document.querySelector("#register").addEventListener("click",Register)
+    // var userData = [];
+    var userData =  JSON.parse(localStorage.getItem("medPlusDatabase")) || []; 
+    function Register(){
+        var name = document.querySelector("#name").value;
+        var surname = document.querySelector("#sname").value;
+        var email = document.querySelector("#email").value;
+        var mobile = document.querySelector("#mobile").value;
+        var password = document.querySelector("#pass").value;
+        var cpassword = document.querySelector("#cpass").value;
+
+
+        var userCard = {
+            Addname :name,
+            Addsurname : surname,
+            Addemail : email,
+            Addmobile : mobile,
+            Addpass : password,
+            Addcpass : cpassword
+        };
+        userData.push(userCard);
+        localStorage.setItem("medPlusDatabase", JSON.stringify(userData))
+        console.log(userData)
+    }
+
+// login-script 
+
+    document.querySelector("#login").addEventListener("click", login)
+    var users =  JSON.parse(localStorage.getItem("medPlusDatabase"));
+    function login(){
+        var email = document.querySelector("#lemail").value;
+        var password = document.querySelector("#lpass").value;
+
+        for(var i=0; i<users.length; i++){
+            if(users[i].Addemail==email && users[i].Addpass == password){
+                console.log("Registerd users");
+                window.location.href = "login.html"
+            }
+            else{
+                window.alert("Please signup first");
+            }
+        }
+    }
 </script>
