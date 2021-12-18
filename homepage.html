@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet" />
+    <title>MedPlusMart.com</title>
+    <link rel="stylesheet" href="medplus.css" />
+</head>
+<style>
+    /* for  Universal css */
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-family: 'Roboto', sans-serif
+}
+
+body {
+  background-color: #F8F8F8;
+}
+
+/* top header css  */
+/* header  */
+#header {
+  margin-top: 4px;
+  /* border-bottom: 1px solid rgb(214, 211, 211);
+  border-top: 1px solid rgb(214, 211, 211); */
+  display: grid;
+  grid-template-columns: 170px 900px;
+  padding: 5px;
+  justify-content: space-between;
+  background-color: white;
+}
+
+/* top header medplus text css  */
+#medplus_text {
+  margin-left: 10px;
+  background-color: #bf151c;
+  border-radius: 5px;
+  padding: 10px 10px;
+  width: 100%;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+span {
+  font-weight: lighter;
+}
+
+/* top header right side css  */
+#top_right_info {
+  width: 77%;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 200px 100px 120px 20px 20px 135px;
+  align-items: center;
+  margin-left: 210px;
+  font-size: 16px;
+}
+.store_finder:hover {
+  cursor: pointer;
+   color: #bf151c;
+}
+.phone:hover {
+  cursor: pointer;
+  color: #bf151c;
+}
+
+/* .android_logo css */
+.android_logo {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* .apple_logo css */
+.apple_logo {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/*top header login/signup */
+#header_login {
+  border: 3px solid rgb(224, 20, 20);
+  border-radius: 5px;
+  padding: 10px;
+  color: #E93049;
+  display: none;
+}
+#header_login:hover {
+  cursor: pointer;
+  background-color: #e93049;
+  color: white;
+}
+
+/* second header css (notification , search bar etc) */
+/* ----  */
+#second_header {
+  /* border-bottom: 1px solid rgb(214, 211, 211); */
+  background-color: white;
+  margin-top: 3px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 400px 650px 120px 370px;
+  grid-gap: 35px;
+  position: sticky;
+  top: 0;
+}
+
+/* head address css  */
+.head_address {
+  /* border: 1px solid teal; */
+  display: grid;
+  grid-template-columns: 20% 75%;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.location_icon {
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  margin-top: 5px;
+  background-color: rgb(231, 229, 229);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.address > h4 {
+  margin-top: 10px;
+  color: rgb(58, 56, 56);
+}
+.address > p {
+  color: grey;
+  margin-top: 5px;
+}
+
+/* search bar css  */
+.search {
+  border: 2px solid rgb(195, 191, 191);
+  background-color: rgb(241, 241, 241);
+  border-radius: 5px;
+}
+#category {
+  margin-left: 20px;
+  width: 120px;
+  height: 30px;
+  border: transparent;
+  background-color: rgb(241, 241, 241);
+  color: rgb(82, 80, 80);
+  font-size: 16px;
+  cursor: pointer;
+}
+#category:hover {
+  color: black;
+}
+
+#search_bar {
+  border: transparent;
+  width: 60%;
+  height: 70%;
+  background-color: rgb(241, 241, 241);
+  font-size: 17px;
+}
+#search_logo {
+  width: 20px;
+  height: 20px;
+  margin-left: 80px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* upload css  */
+.upload {
+  border: transparent;
+  border-radius: 5px;
+  font-size: 20px;
+  background-image: linear-gradient(
+    to right,
+    rgb(175, 238, 175),
+    rgb(109, 203, 240)
+  );
+}
+.upload:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+/* .second_head_left css */
+.second_head_left {
+  /* border: 1px solid red; */
+  margin-left: 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#notification_logo {
+  width: 30px;
+  cursor: pointer;
+  height: 30px;
+}
+#cart_logo {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* <!-- third header with health store, pharmacy Dignostics etc html  --> */
+#third_header {
+  width: 100%;
+  padding: 15px 0px;
+  display: grid;
+  grid-template-columns: 20px 130px 110px 110px 130px 110px 110px 150px;
+  grid-gap: 10px;
+  /* border: 1px solid red; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+#menu_logo {
+  width: 16px;
+  height: 16px;
+  margin-left: 12px;
+  margin-top: 3px;
+  cursor: pointer;
+}
+#third_header > h5 {
+  /* border: 1px solid red; */
+  color: rgb(58, 56, 56);
+  font-size: 17px;
+}
+#third_header > h5:hover {
+  color: rgba(216, 33, 64, 0.993);
+  cursor: pointer;
+}
+
+#third_header > :nth-child(2) {
+  margin-left: 10px;
+  color: #bf151c;
+}
+
+/* <!-- banner section with discounts offer css --> */
+#offers_banner {
+  width: 98%;
+  margin-top: 20px;
+  margin-left: 22px;
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+
+/* discounted banner css  */
+.med_banner {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+}
+
+/* other dicounts css  */
+.other_discounts {
+  text-align: center;
+  /* border: 1px solid blue; */
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(6, 16.5%);
+  height: 65px;
+  color: rgb(155, 153, 153);
+  font-size: 17px;
+  font-weight: bold;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.discount {
+  padding: 15px 0px;
+}
+.discount > :nth-child(2) {
+  font-size: 14px;
+}
+.discount:hover {
+  cursor: pointer;
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+/* advertisement_section css  */
+.add1 {
+  width: 90%;
+  padding: 0px 20px;
+  height: 233px;
+  margin-bottom: 15px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+}
+.add2 {
+  width: 90%;
+  padding: 0px 20px;
+  height: 234px;
+  cursor: pointer;
+}
+
+/* <!-- below discount banner section uload for order and need help for ordering css  --> */
+#upload_and_help_section {
+  width: 98%;
+  /* border: 1px solid red; */
+  margin-top: 20px;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.box {
+  width: 47%;
+  border: 1px solid rgb(212, 209, 209);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  background-color: white;
+  margin-left: 22px;
+  padding: 20px 20px;
+  line-height: 25px;
+  font-size: 18px;
+  /* padding-left: 20px; */
+}
+.box:hover  {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+.box>:first-child:hover{
+  color: #E93049;
+}
+.box > p {
+  color: rgb(155, 153, 153);
+}
+
+/* shoping_by_category css  */
+#shop_by_cat {
+  width: 97%;
+  /* border: 1px solid red; */
+  background-color: white;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* shop by category heading  */
+#shop_by_cat > h4 {
+  font-size: 22px;
+  font-weight: lighter;
+  margin-left: 20px;
+  padding-top: 30px;
+}
+
+/* products in shop by category  */
+.products_by_category {
+  margin-top: 40px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(6, 220px);
+  justify-content: center;
+}
+.products {
+  /* border: 1px solid red; */
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 30px;
+}
+.products > div {
+  padding: 50px;
+  border-radius: 49%;
+  border: 2px solid rgb(179, 173, 173);
+  /* margin-bottom: 20px; */
+}
+.products > div:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: #bf151c;
+  cursor: pointer;
+}
+
+.products > img {
+  /* padding: 40px; */
+  background-color: white;
+  width: 180px;
+  /* border: 1px solid blue; */
+}
+
+.products > :nth-child(2) {
+  /* border: 1px solid red; */
+  padding: 20px 0px;
+}
+.products:hover > :nth-child(2) {
+  color: #bf151c;
+  cursor: pointer;
+}
+
+/* <!-- top products - below shop by category css   -->  */
+#shop_by_top_products {
+  width: 97%;
+  /* border: 1px solid red; */
+  background-color: white;
+  margin: auto;
+  margin-top: 20px;
+  padding-bottom: 30px;
+}
+#shop_by_top_products > h4 {
+  font-size: 22px;
+  font-weight: lighter;
+  margin-left: 20px;
+  padding-top: 30px;
+}
+
+.top_cat_product {
+  margin-top: 40px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(6, 260px);
+  justify-content: center;
+  text-align: center;
+}
+.top_products:hover {
+  /* border: 1px solid red; */
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  /* cursor: pointer; */
+}
+.top_products > :nth-child(2) {
+  /* border: 1px solid blue; */
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.top_products > div {
+  display: flex;
+  justify-content: center;
+}
+.top_products > div > b {
+  color: #bf151c;
+}
+.top_products > div > span {
+  text-decoration: line-through;
+  font-size: 14px;
+  margin-top: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.top_products > div > p {
+  font-weight: bold;
+}
+.top_products > button {
+  margin-top: 15px;
+  width: 130px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #da3238;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.top_products > button:hover {
+  background-color: #bf151c;
+}
+.top_products > p {
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(109, 108, 108);
+  /* border: 1px solid red; */
+  height: 50px;
+}
+.top_products > img {
+  cursor: pointer;
+  /* border: 1px solid blue; */
+}
+
+/* huggies baby poster css  */
+#baby_logo>img{
+  /* border: 1px solid red; */
+  margin-top: 20px;
+  margin-left: 23px;
+  cursor: pointer;
+  width: 97%;
+}
+
+/* suggested products below baby huggies poster css  */
+#shop_by_suggested_products {
+  width: 97%;
+  /* border: 1px solid red; */
+  background-color: white;
+  margin: auto;
+  margin-top: 20px;
+  padding-bottom: 30px;
+  /* border: 1px solid red; */
+}
+#shop_by_suggested_products > h4 {
+  font-size: 22px;
+  font-weight: lighter;
+  margin-left: 20px;
+  padding-top: 30px;
+}
+
+.suggested_cat_product {
+  margin-top: 40px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(6, 260px);
+  justify-content: center;
+  text-align: center;
+}
+.suggested_products:hover {
+  /* border: 1px solid red; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  /* cursor: pointer; */
+}
+.suggested_products > :nth-child(2) {
+  /* border: 1px solid blue; */
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.suggested_products > div {
+  display: flex;
+  justify-content: center;
+}
+.suggested_products > div > b {
+  color: #bf151c;
+}
+.suggested_products> div > span {
+  text-decoration: line-through;
+  font-size: 14px;
+  margin-top: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.suggested_products> div > p {
+  font-weight: bold;
+}
+.suggested_products> button {
+  margin-top: 15px;
+  width: 130px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #da3238;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.suggested_products > button:hover {
+  background-color: #bf151c;
+}
+.suggested_products> p {
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(109, 108, 108);
+  /* border: 1px solid red; */
+  height: 50px;
+}
+.suggested_products > img {
+  cursor: pointer;
+  /* border: 1px solid blue; */
+}
+
+/* <!-- banner 1  --> css  */
+#banner1>img{
+  /* border: 1px solid red; */
+  margin-top: 20px;
+  margin-left: 23px;
+  cursor: pointer;
+  width: 97%;
+}
+
+/* <!-- banner 2  --> css  */
+#banner2>img{
+  /* border: 1px solid red; */
+  margin-top: 15px;
+  margin-left: 23px;
+  cursor: pointer;
+  width: 97%;
+}
+
+/* <!-- banner 3  --> css  */
+#banner3>img{
+  /* border: 1px solid red; */
+  margin-top: 15px;
+  margin-left: 23px;
+  cursor: pointer;
+  width: 97%;
+}
+
+/* <!-- banner 4  --> css  */
+#banner4>img{
+  /* border: 1px solid red; */
+  margin-top: 15px;
+  margin-left: 23px;
+  cursor: pointer;
+  width: 97%;
+} 
+
+/* <!-- banner 5  --> css  */
+#banner5>img{
+  /* border: 1px solid red; */
+  margin-top: 15px;
+  margin-left: 23px;
+  cursor: pointer;
+  width: 97%;
+}
+
+/* <!-- banner 6  --> css  */
+#banner6>img{
+  /* border: 1px solid red; */
+  margin-top: 15px;
+  margin-left: 23px;
+  width: 97%;
+  cursor: pointer;
+}
+
+/* <!-- banner 7  --> css  */
+#banner7>img{
+  /* border: 1px solid red; */
+  margin-top: 15px;
+  margin-left: 23px;
+  width: 97%;
+  cursor: pointer;
+}
+
+
+/* <!-- why med plus mart section - below banner 7  --> */
+#why_med_plus{
+width: 97%;
+/* border: 1px solid red; */
+margin: auto;
+margin-top: 20px;
+padding-top: 30px;
+background-color: white;
+}
+
+/* why med plus heading  */
+#why_med_plus>h2{
+/* border: 1px solid blue; */
+margin-top: 30px;
+padding-left: 30px;
+}
+
+ /* med plus features boxes   */
+ .features_container{
+   display: grid;
+   /* border: 1px solid blue; */
+   grid-template-columns: repeat(2, 50%);
+ }
+
+/* left side boxes   */
+ .left_side_features{
+   /* border: 1px solid blue; */
+   padding-top: 20px;
+   /* display: flex; */
+ }
+
+ .left_side_boxes{
+   display: flex;
+   margin-bottom: 30px;
+   line-height: 30px;
+ }
+ .left_side_boxes>img{
+   width: 40px;
+   height: 40px;
+   margin-left: 40px;
+   margin-right: 20px;
+ }
+
+
+ /* right side boxes   */
+ .right_side_features{
+   /* border: 1px solid blue; */
+   padding-top: 20px;
+ }
+
+ .right_side_boxes{
+   display: flex;
+   margin-bottom: 30px;
+   line-height: 30px;
+ }
+ .right_side_boxes>img{
+   width: 40px;
+   height: 40px;
+   margin-left: 40px;
+   margin-right: 20px;
+ }
+
+
+/* <!-- information you can use for section - below other feartures  --> */
+#info_you_can_use{
+  display: flex;
+  width: 97%;
+  margin: auto;
+  margin-top: 20px;
+  padding-top: 30px;
+  background-color: white;
+}
+#info_you_can_use>div{
+  /* border: 1px solid red; */
+   width: 70%;
+   margin-left: 20px;
+   margin-bottom: 20px;
+  /* border: 1px solid red; */
+
+}
+#info_you_can_use>div>h1{
+  margin-bottom: 10px;
+  color: orangered;
+}
+#info_you_can_use>div>h3{
+  margin-bottom: 5px;
+}
+#info_you_can_use>div>:nth-child(4){
+  margin-bottom: 7px;
+  font-size: 15px;
+  color: grey;
+  cursor: pointer;
+}
+
+
+#info_you_can_use>div>:nth-child(5){
+ line-height: 22px;
+  font-size: 15px;
+}
+
+/* readmore  */
+#info_you_can_use>:nth-child(2){
+  /* border: 1px solid red; */
+  cursor: pointer;
+  /* padding-top: 110px; */
+  color: #bf151c;
+  text-decoration: underline;
+  padding-top: 180px;
+  /* border: 1px solid red; */
+
+}
+
+/* other infomation section css  */
+#other_informations{
+  width: 100%;
+  margin-top: 15px;
+  background-color: white;
+  padding-top: 30px;
+}
+
+
+/* mobile applications informations section css */
+.mobile_app_info{
+  width: 97%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  /* border: 1px solid red; */
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.mobile_app_info>img{
+  height: 350px;
+}
+/* <!-- download our app section  --> */
+.app_info{
+  text-align: center;
+  /* border: 1px solid red; */
+  margin: auto;
+  margin-top: 80px;
+width: 45%;
+}
+.app_info>h2{
+  font-weight: lighter;
+margin-bottom: 20px;
+font-size: 23px;
+}
+.app_info>p{
+  margin-bottom: 10px;
+}
+
+.applications_store_logo{
+  display: flex;
+  /* border: 1px solid red; */
+  width: 45%;
+  margin-left: 290px;
+}
+.applications_store_logo>img{
+  margin-right: 20px;
+  width: 30%;
+}
+.applications_store_logo>img:hover{
+  cursor: pointer;
+}
+
+/* <!-- need any help or subscribe section  --> */
+#call_and_subscribe{
+width: 97%;
+margin: auto;
+margin-bottom: 50px;
+display: grid;
+grid-template-columns: 50% 50%;
+/* border: 1px solid red; */
+}
+
+#call_and_subscribe>div{
+  /* border: 1px solid red; */
+  padding: 10px 0px;
+}
+
+/* call section css  */
+.call{
+  display: flex;
+}
+.call>img{
+  margin-right: 20px;
+}
+.call>div>h5{
+  margin-top:5px;
+  font-size: 20px;
+}
+.call>div>h5:hover{
+  color: #e93049;
+  cursor: pointer;
+}
+
+/* subscribe section css  */
+.subscribe{
+  display: flex;
+}
+
+/* latest offer part  */
+.latest_offer>p{
+  line-height: 25px;
+  margin-right: 20px;
+}
+.latest_offer>:first-child{
+  color: rgb(61, 60, 60);
+  font-size: 18px;
+}
+.latest_offer>:nth-child(2){
+  font-size: 25px;
+}
+
+/* email part  */
+.email_input{
+  width: 50%;
+  border: transparent;
+  border-bottom: 3px solid rgb(211, 209, 209);
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+/* subscribe button part  */
+.subscribe_btn{
+  width: 25%;
+  height: 50px;
+  font-size: 20px;
+  color: white;
+  background-color:  #E93049;
+  border: none;
+  border-radius: 3px;
+}
+.subscribe_btn:hover{
+  background-color:white ;
+  color: #E93049;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+/* aboutUs , FAQ's etc section css   */
+#aboutUs{
+  width: 97%;
+  margin: auto;
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid rgb(199, 198, 198);
+  /* border: 1px solid red; */
+}
+
+.other_links{
+  /* border:1px solid blue; */
+  display: flex;
+  
+}
+#aboutUs>img{
+  /* border: 1px solid blue; */
+  margin-left: 350px;
+  cursor: pointer;
+}
+.other_links>p{
+  /* border:1px solid yellow ; */
+  margin-right: 15px;
+  font-size: 17px;
+  color: blue;
+  /* font-weight: bold; */
+  cursor: pointer;
+}
+
+
+/*home page payment option section  */
+#payment_options{
+  width: 97%;
+  margin: auto;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+#payment_options>h4{
+margin: 20px 0px;
+/* border: 1px solid red; */
+font-size: 25px;
+font-weight: lighter;
+}
+
+.payments_logo{
+  display: flex;
+  margin-left: 20px;
+  
+}
+.payments_logo>img{
+  width: 80px;
+  height: 50px;
+  margin-right: 20px;
+  padding: 0px 10px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+/* <!-- general store and pharmacy links section  --> */
+#general_store_and_pharmayc{
+width: 97%;
+margin: auto;
+display: grid;
+grid-template-columns: 47% 47%;
+grid-gap: 100px;
+}
+
+.general_store_links{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
+.general_store_links>:nth-child(1){
+font-weight: bold;
+}
+
+.general_store_links>:nth-child(2){
+color: gray;
+line-height: 25px;
+}
+
+.pharmacy_store_links{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.pharmacy_store_links>:nth-child(1){
+font-weight: bold;
+}
+.pharmacy_store_links>:nth-child(2){
+color: gray;
+line-height: 25px;
+}
+
+
+/* <!-- partners div in footer section  --> */
+#partners_and_image{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 58% 38%;
+}
+#partners_and_image>div{
+  /* border: 1px solid red; */
+  margin-left: 30px;
+}
+
+
+.partners{
+  margin-right: 20px;
+  /* border: 1px solid red; */
+  margin-bottom: 25px;
+}
+.partners>p{
+  margin-top: 20px;
+  font-size: 20px;
+  color: rgb(73, 73, 73);
+}
+
+.partner-social{
+  display: flex;
+  border-bottom: 3px solid rgb(212, 209, 209);
+  padding-bottom: 30px;
+}
+
+.partner-social>div>img{
+  margin-top: 20px;
+  margin-left: 10px;
+cursor: pointer;
+}
+.partner-social>div>h3{
+  margin-top: 20px;
+  font-size: 25px;
+}
+.partner-social>div{
+  /* border: 1px solid yellowgreen; */
+  width: 50%;
+}
+
+/* follow us section - instagram, facebook, etc  */
+.folowUs_images{
+  display: flex;
+}
+.folowUs_images>img{
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+
+
+/*partners right side image  */
+#partners_and_image>img{
+  /* border: 1px solid green; */
+  height: 100%;
+}
+
+
+/* end of home page - last section  */
+#last_section{
+  background-color: #131a22;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6,15%);
+  grid-gap: 32px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.end_footer{
+  display: flex;
+  /* border: 1px solid red; */
+  color: white;
+}
+.end_footer>img{
+  width: 30px;
+  height: 30px;
+  color: green;
+  margin-left: 20px;
+}
+.end_footer>p{
+  font-size: 18px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+</style>
+
+<body>
+    <div id="container">
+        <!-- top head with logo and , sign up/sign in , phone number etc..  -->
+        <div id="header">
+            <!-- Medplus text html  -->
+            <div id="medplus_text">MedPlus <span>Mart</span></div>
+
+            <!-- top header right side info html  -->
+            <div id="top_right_info">
+                <p class="phone">Call 040-67006700 for help!</p>
+                <p class="store_finder">Store Finder</p>
+                <p>Download App</p>
+                <img class="android_logo" src="android-logo.png" alt="" />
+                <img class="apple_logo" src="apple-logo.png" alt="" />
+                <p id="header_login">Login / Sign up</p>
+            </div>
+        </div>
+        <!-- second header with search bar, cart , notification bell  -->
+        <div id="second_header">
+            <!-- head address html  -->
+            <div class="head_address">
+                <img src="location_logo.png" alt="" class="location_icon" />
+                <div class="address">
+                    <h4>6/56, Bhavani pur, Moosapat, Hyde...</h4>
+                    <p>Hoem Delivery & Store pickup</p>
+                </div>
+            </div>
+
+            <!-- search html  -->
+            <div class="search">
+                <select id="category">
+                    <option value="">All Products</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <input type="text" id="search_bar" placeholder="Search for.. genral or pharma products" />
+                <img src="search_logo.png" alt="" id="search_logo" />
+            </div>
+
+            <!-- upload button -->
+            <button class="upload">Upload</button>
+
+            <!-- second head logo  -->
+            <div class="second_head_left">
+                <img src="notification_logo.png" alt="" id="notification_logo" />
+                <img src="cart_logo.png" alt="" id="cart_logo" />
+            </div>
+        </div>
+
+        <!-- third header with health store, pharmacy Dignostics etc html  -->
+        <div id="third_header">
+            <img src="menu_logo.png" alt="" id="menu_logo" />
+            <h5>Health Store</h5>
+            <h5>Pharmacy</h5>
+            <h5>Dignostics</h5>
+            <h5>FlexRewards</h5>
+            <h5>Promotions</h5>
+            <h5>Healty Life</h5>
+            <h5>MedPlus Wallet</h5>
+        </div>
+
+        <!-- banner section with discounts offer html -->
+        <div id="offers_banner">
+            <!-- right side discount section  -->
+            <div class="discount_section">
+                <img src="med_banner.jpg" alt="" class="med_banner" />
+                <div class="other_discounts">
+                    <div class="discount">
+                        <p>Flat 20% off</p>
+                        <p>On every medicine</p>
+                    </div>
+                    <div class="discount">
+                        <p>Get upto 600</p>
+                        <p>Mobikwik Cash Back</p>
+                    </div>
+                    <div class="discount">
+                        <p>Upto Rs 399 Off</p>
+                        <p>Baby Diapers</p>
+                    </div>
+                    <div class="discount">
+                        <p>Upto 15% Off</p>
+                        <p>Nivea</p>
+                    </div>
+                    <div class="discount">
+                        <p>Upto 15% Off</p>
+                        <p>Horlicks</p>
+                    </div>
+                    <div class="discount">
+                        <p>Lab Tests</p>
+                        <p>Health Packages</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- offer banner right side advertisement_section  -->
+            <div class="advertisement_section">
+                <img src="add_1.jpg" alt="" class="add1" />
+                <img src="add_2.jpg" alt="" class="add2" />
+            </div>
+        </div>
+
+        <!-- below discount banner section uload for order and need help for ordering html  -->
+        <div id="upload_and_help_section">
+            <div class="box">
+                <h3>Upload for Order</h3>
+                <p>Get a call back</p>
+            </div>
+            <div class="box">
+                <h3>Need help with Ordering</h3>
+                <p>call 040 6700 6700</p>
+            </div>
+        </div>
+
+        <!-- shop by category below need help html  -->
+        <div id="shop_by_cat">
+            <h4>Shop By Category</h4>
+            <div class="products_by_category">
+                <div class="products">
+                    <div><img src="prod1.jpg" alt="" /></div>
+                    <p>OTC & Health Needs</p>
+                </div>
+                <div class="products">
+                    <div><img src="prod2.jpg" alt="" /></div>
+                    <p>Health & Nutrition</p>
+                </div>
+                <div class="products">
+                    <div><img src="prod3.jpg" alt="" /></div>
+                    <p>Personal Care</p>
+                </div>
+                <div onclick="window.location.href='med_page2.html'" class="products">
+                    <div><img src="prod4.jpg" alt="" /></div>
+                    <p>Vitamins & Supplements</p>
+                </div>
+                <div class="products">
+                    <div><img src="prod5.jpg" alt="" /></div>
+                    <p>Baby Needs</p>
+                </div>
+                <div class="products">
+                    <div><img src="prod6.jpg" alt="" /></div>
+                    <p>Health Needs</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- top products - below shop by category html   -->
+        <div id="shop_by_top_products">
+            <h4>Top Products</h4>
+            <div class="top_cat_product">
+                <div class="top_products">
+                    <!-- <img src="" alt=""> -->
+                    <img src="top_prod5.jpg" alt="" />
+                    <p>HUGGIES WONDERPANTS DIAPER S86</p>
+                    <div class="price">
+                        <b>Rs 796.00</b><span>Rs1090</span>
+                        <p>(Save Rs330.00)</p>
+                    </div>
+                    <button>Add to cart</button>
+                </div>
+                <div class="top_products">
+                    <img src="top_prod2.jpg" alt="" />
+                    <p>BABY DOVE RICH MOISTURE HEAD TO TOE BABY WASH 400ML</p>
+                    <div class="price">
+                        <b>Rs 189.00</b><span>Rs 315</span>
+                        <p>(Save 40%)</p>
+                    </div>
+                    <button>Add to cart</button>
+                </div>
+                <div class="top_products">
+                    <img src="top_prod3.jpg" alt="" />
+                    <p>HORLICKS PROTEIN PLUS 400GM VANILLA JAR</p>
+                    <div class="price">
+                        <b>Rs 500.00</b><span>Rs 550</span>
+                        <p>(Save Rs50.00)</p>
+                    </div>
+                    <button>Add to cart</button>
+                </div>
+                <div class="top_products">
+                    <img src="top_prod4.jpg" alt="" />
+                    <p>PONDS COLD CREAM 100ML</p>
+                    <div class="price">
+                        <b>Rs 119.00</b><span>Rs 149</span>
+                        <p>(Save Rs30.00)</p>
+                    </div>
+                    <button>Add to cart</button>
+                </div>
+                <div class="top_products">
+                    <img src="top_prod5.jpg" alt="" />
+                    <p>HUGGIES WONDERPANTS DIAPER S86</p>
+                    <div class="price">
+                        <b>Rs796.00</b><span>Rs1090</span>
+                        <p>(SaveRs330.00)</p>
+                    </div>
+                    <button>Add to cart</button>
+                </div>
+                <div class="top_products">
+                    <img src="top_prod1.jpg" alt="" />
+                    <p>HORLICKS WOMEN'S PLUS CARAMEL 400G JAR</p>
+                    <div class="price">
+                        <b>Rs 269.00</b><span>Rs299</span>
+                        <p>(Save Rs30.00)</p>
+                    </div>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- HUGGIES BABY POSTER  -->
+        <div id="baby_logo">
+            <img src="baby.jpg" alt="" />
+        </div>
+
+        <!-- suggested products - below huggies baby poster html   -->
+        <div id="shop_by_suggested_products">
+            <h4>suggested Products</h4>
+            <div class="suggested_cat_product">
+                <div class="suggested_products">
+                    <!-- <img src="" alt=""> -->
+                    <img src="sugg_prod.jpg" alt="" />
+                    <p>CLEAN BAC MULTI SURFACE DISINFECTED SPRAY</p>
+                    <div class="price">
+                        <b>Rs 189.00</b>
+                        <!-- <span>Rs1090</span> -->
+                        <p>(Save Upto 5%)</p>
+                    </div>
+                    <button>Add to cart</button>
+                </div>
+                <div class="suggested_products">
+                    <img src="sugg_prod2.jpg" alt="" />
+                    <p>NAREENAS OXYGEN CONCENTRATOR</p>
+                    <div class="price">
+                        <b>Rs 65000</b>
+                        <!-- <span>Rs 315</span> -->
+                        <p>(Save Upto 20%)</p>
+                    </div>
+                    <button>Add to cart</button>
+                </div>
+                <div class="suggested_products">
+                    <img src="top_prod3.jpg" alt="" />
+                    <p>HORLICKS PROTEIN PLUS 400GM VANILLA JAR</p>
+                    <div class="price">
+                        <b>Rs 500.00</b><span>Rs 550</span>
+                        <p>(Save Rs50.00)</p>
+                    </div>
+                    <button>Add to cart</button>
+                </div>
+                <div class="suggested_products">
+                    <img src="sugg_prod5.jpg" alt="" />
+                    <p>JOYTECH INFRARED FOREHEAD THERMOMETER</p>
+                    <div class="price">
+                        <b>Rs 2799.00</b><span>Rs 5999</span>
+                        <p>(SaveRs53.34%)</p>
+                    </div>
+                    <button>Add to cart</button>
+                </div>
+                <div class="suggested_products">
+                    <img src="top_prod5.jpg" alt="" />
+                    <p>HUGGIES WONDERPANTS DIAPER S86</p>
+                    <div class="price">
+                        <b>Rs796.00</b><span>Rs1090</span>
+                        <p>(SaveRs330.00)</p>
+                    </div>
+                    <button>Add to cart</button>
+                </div>
+                <div class="suggested_products">
+                    <img src="top_prod1.jpg" alt="" />
+                    <p>HORLICKS WOMEN'S PLUS CARAMEL 400G JAR</p>
+                    <div class="price">
+                        <b>Rs 269.00</b><span>Rs299</span>
+                        <p>(Save Rs30.00)</p>
+                    </div>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- banner 1  -->
+        <div id="banner1">
+            <img src="banner1.jpg" alt="" />
+        </div>
+
+        <!-- banner 2  -->
+        <div id="banner2">
+            <img src="banner2.jpg" alt="" />
+        </div>
+
+        <!-- banner 3  -->
+        <div id="banner3">
+            <img src="banner3.jpg" alt="" />
+        </div>
+
+        <!-- banner 4  -->
+        <div id="banner4">
+            <img src="banner4.jpg" alt="" />
+        </div>
+
+        <!-- banner 5 -->
+        <div id="banner5">
+            <img src="banner5.jpg" alt="" />
+        </div>
+
+        <!-- banner 6  -->
+        <div id="banner6">
+            <img src="banner6.jpg" alt="" />
+        </div>
+
+        <!-- banner 7  -->
+        <div id="banner7">
+            <img src="banner7.jpg" alt="" />
+        </div>
+
+        <!-- why med plus mart section - below banner 7  -->
+        <div id="why_med_plus">
+            <!-- heading  -->
+            <h2>Why MedPlusMart?</h2>
+
+            <!-- other features ptions  -->
+            <div class="features_container">
+                <div class="left_side_features">
+                    <!-- leftside boxes  -->
+                    <div class="left_side_boxes">
+                        <img src="pig_bank.png" alt="" class="pig" />
+                        <!-- <img src="hand.png" alt=""  class="hand"/> -->
+                        <div>
+                            <h3>Maximize Your Savings</h3>
+                            <p>
+                                With FlexiRewards, You can choose the reward cash discount or
+                                free goods.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="left_side_boxes">
+                        <img src="delivery.png" alt="" />
+                        <div>
+                            <h3>Home Delivery</h3>
+                            <p>
+                                We offer convenient home delivery of medicines & general
+                                goods.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right_side_features">
+                    <!-- right side boxes  -->
+                    <div class="right_side_boxes">
+                        <img src="click.png" alt="" class="pig" />
+                        <div>
+                            <h3>Click and Pick</h3>
+                            <p>Click to buy a range of products across categories</p>
+                        </div>
+                    </div>
+                    <div class="right_side_boxes">
+                        <img src="note.png" alt="" />
+                        <div>
+                            <h3>Unlimited Health Records</h3>
+                            <p>Save all your health records (Medical Records...)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- information you can use for section - below other feartures  -->
+        <div id="info_you_can_use">
+            <div>
+                <h4>Information you can use for a</h4>
+                <h1>HEALTHY LIFE</h1>
+                <h3>Top Healthy Foods for Kids</h3>
+                <p>by MedPlus Team, November 26, 2021</p>
+                <p>
+                    Nutritious, healthy foods are very important for optimum growth and
+                    development in children. However, in today?s day, with the abundance
+                    of easily available fast food, and packaged snacks, choosing the
+                    right food is not an opti...
+                </p>
+            </div>
+            <p>Readmore</p>
+            <img src="info_use.svg" alt="" />
+        </div>
+
+        <!-- other information section -->
+        <div id="other_informations">
+            <!-- mobile app informations  -->
+            <div class="mobile_app_info">
+                <img src="mobile.png" alt="" />
+                <div>
+                    <div class="app_info">
+                        <h2>Download Our App Now</h2>
+                        <p>
+                            Buy general store products and medicines from your mobile at
+                            anytime, anywhere
+                        </p>
+                        <p>Available on:</p>
+                    </div>
+                    <div class="applications_store_logo">
+                        <img src="https://static1.medplusmart.com/medplusmart/assets/_b493453735e6e4eb2438d8f4f4ac53cf_/new_theme/web/images/Google_Play_Store-cssbg.svg"
+                            alt="" />
+                        <img src="https://static1.medplusmart.com/medplusmart/assets/_211ec1ea25fdedd19882d51c673a439d_/new_theme/web/images/App_Store-cssbg.svg"
+                            alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- need any help or subscribe section  -->
+            <div id="call_and_subscribe">
+                <!-- call section  -->
+                <div class="call">
+                    <img src="https://static1.medplusmart.com/medplusmart/assets/_a34d265f3ea369c0259f6cf98563a642_/new_theme/web/images/call.svg"
+                        alt="" />
+                    <div>
+                        <p>Need any help?</p>
+                        <h5>040_67006700</h5>
+                    </div>
+                </div>
+
+                <!-- subscribe section  -->
+                <div class="subscribe">
+                    <div class="latest_offer">
+                        <p>Subscribe for</p>
+                        <p>Latest Offers</p>
+                    </div>
+                    <input type="email" class="email_input" placeholder="Your email address here" />
+                    <button class="subscribe_btn">SUBSCRIBE</button>
+                </div>
+            </div>
+
+            <!-- aboutus FAQ's etc section  -->
+            <div id="aboutUs">
+                <div class="other_links">
+                    <p>About us</p>
+                    <p>FAQs</p>
+                    <p>Locate A MedPlus Store</p>
+                    <p>Track Orders</p>
+                    <p>Browse All Brands</p>
+                    <p>Custmer Feedback</p>
+                    <p>Community Delivery</p>
+                    <p>Bulk Order</p>
+                    <p>Contact Us</p>
+                </div>
+                <img src="https://www.medplusmart.com/new_theme/web/images/xsiteseal_gd_3_h_l_m.png.pagespeed.ic.UUaIsQTtFt.webp"
+                    alt="" />
+            </div>
+
+            <!-- payment option section  -->
+            <div id="payment_options">
+                <h4>Payments</h4>
+                <div class="payments_logo">
+                    <img src="visa.png" alt="" /><img src="mastercard.png" alt="" /><img src="moestro.png" alt="" /><img
+                        src="paytm.png" alt="" /><img src="mobikwik.png" alt="" /><img src="phonepe.png" alt="" /> <img
+                        src="gpay.png" alt="" />
+                </div>
+            </div>
+
+            <!-- general store and pharmacy links section  -->
+            <div id="general_store_and_pharmayc">
+                <!-- general links section  -->
+                <div class="general_links">
+                    <h2>General Store</h2>
+                    <div class="general_store_links">
+                        <p>Baby-Needs:</p>
+                        <p>Baby Care / Baby Food</p>
+                    </div>
+                    <div class="general_store_links">
+                        <p>Personal-Care:</p>
+
+                        <p>
+                            Skin Care / Sanitary & Hygiene / Oral Care / Hair Care / Bath &
+                            Body Products / Sexual Wellness / Deodorants & Perfumes / Eyes,
+                            Ears & Lips / Shaving & Hair Removal / Hand, Foot & Nails
+                        </p>
+                    </div>
+                    <div class="general_store_links">
+                        <p>
+                            Health-n-Nutrition:
+                        </p>
+                        <p>
+                            Health Drinks / Breakfast Cereals / Nutritional Foods / Weight
+                            Management
+                        </p>
+                    </div>
+                    <div class="general_store_links">
+                        <p>
+                            OTC-n-Health-Needs:
+                        <p>First Aid / Pain Relief / Cold Relief /
+                            Joint Care & Support / Skin & Foot Care / Digestives & Laxatives
+                            / Healthcare Devices / Anti-Smoking Products
+                        </p>
+                        </p>
+                    </div>
+                    <div class="general_store_links">
+                        <p> Vitamins-n-Supplements:
+                        </p>
+                        <p>Sports Supplements /
+                            Vitamins & Minerals /
+                            Herbal Supplements /
+                            Jamieson</p>
+                    </div>
+                    <div class="general_store_links">
+                        <p> Diabetic-Needs:
+                        </p>
+                        <p>Diabetic Testing Needs /
+                            Diabetic Nutrition /
+                            Diabetic Aids</p>
+                    </div>
+                    <div class="general_store_links">
+                        <p> Household-Needs:
+                        </p>
+                        <p>Cleaning Needs /
+                            Detergents /
+                            Germ Protection /
+                            Home Utilities /
+                            Kitchen Utilities /
+                            Tissues & Disposables /
+                            Rice & Grains /
+                            Dals & Pulses /
+                            Atta, Rava & Flours /
+                            Luggage /
+                            Dried Fruits, Nuts and Seeds /
+                            Bakery & Confectionary /
+                            Beverages /
+                            Noodles, Soups & Pasta /
+                            Snacks & Ready To Eat /
+                            Jams, Sauces & Spreads /
+                            Dairy Products /
+                            Branded Organic & Ayurvedic</p>
+                    </div>
+                </div>
+
+                <!-- pharmacy links section  -->
+                <div class="pharmacy_links">
+                    <h2>Pharmacy</h2>
+                    <div class="pharmacy_store_links">
+                        <p>Medicine Information:</p>
+                        <p>
+                            Health Records /
+                            Request a Product /
+                            Store Locator /
+                            Top Searches /
+                            Alphabet Wise Products</p>
+                    </div>
+                    <div class="pharmacy_store_links">
+                        <p>Browse drugs by Therapeutic category:</p>
+
+                        <p>
+                            Browse drugs by Therapeutic category:
+                            Gastrointestinal & Hepatobiliary System /
+                            Cardiovascular & Hematopoietic system /
+                            Respiratory System /
+                            Central Nervous System /
+                            Musculo-Skeletal System /
+                            Hormones /
+                            Contraceptive Agents /
+                            Infectious Disease Drugs /
+                            Oncology /
+                            Genito - Urinary System /
+                            Endocrine & Metabolic System /
+                            Vitamins & Minerals /
+                            Nutrition /
+                            Eye /
+                            Ear & Mouth / Throat /
+                            Dermatologicals /
+                            Anaesthetics & Intravenous Solutions /
+                            Allergy & Immune System /
+                            Antidotes, Detoxifying Agents & Drugs Used in Substance Dependence /
+                            Miscellaneous
+                        </p>
+                    </div>
+                    <div class="pharmacy_store_links">
+                        <p>
+                            Browse Surgicals products by category:
+                        </p>
+                        <p>
+
+                            Anaesthesia /
+                            Cardiovascular /
+                            CSSD /
+                            Catheters & Tubes /
+                            IV Needs /
+                            Mobilization Equipment /
+                            Orthopaedic /
+                            Surgicals /
+                            Pulmonary/Emergency Care /
+                            Diagnostic/Imaging
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <!-- partners div in footer section  -->
+        <div id="partners_and_image">
+            <div class="partners">
+                <div class="partner-social">
+                    <div>
+                        <h3>Partners</h3>
+                        <img src="https://static1.medplusmart.com/medplusmart/assets/_bdc13e652d59c521845483efb1f30b31_/new_theme/web/images/new/MedPlusLens.png"
+                            alt="">
+                    </div>
+                    <div>
+                        <h3>Follow Us</h3>
+                        <div class="folowUs_images">
+                            <img src="facebook.png" alt=""><img src="instagram.png" alt=""><img src="youtube.png"
+                                alt=""><img src="linkedin.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <p>&copy; 2021 MedPlusMart.com All rights reserved</p>
+            </div>
+            <img src="https://static1.medplusmart.com/medplusmart/assets/_b711323f52d18fea248956aa933a7a9a_/new_theme/web/images/new/footer-img.svg"
+                alt="">
+        </div>
+
+        <!-- otherotion in footer section  -->
+        <div id="last_section">
+            <div class="end_footer">
+                <img src="https://static1.medplusmart.com/medplusmart/assets/_7ce28e4d38d5831f8b79ccb074f7efda_/new_theme/web/images/new/bulk-order.svg"
+                    alt="">
+                <p>Bulk Order</p>
+            </div>
+            <div class="end_footer">
+                <img src="https://static1.medplusmart.com/medplusmart/assets/_3f6749457ccb366054e8b4730031d82a_/new_theme/web/images/new/footer-community.svg"
+                    alt="">
+                <p>Community Delivery </p>
+            </div>
+            <div class="end_footer">
+                <img src="https://static1.medplusmart.com/medplusmart/assets/_ece1fc48e014048f8d5cdf497e01b7d4_/new_theme/web/images/new/sitemap.svg"
+                    alt="">
+                <p>Stamp</p>
+            </div>
+            <div class="end_footer">
+                <img src="https://static1.medplusmart.com/medplusmart/assets/_9e669b497a0681ed24b8d7ba7e1b8378_/new_theme/web/images/new/privacy.svg"
+                    alt="">
+                <p>Privacy</p>
+            </div>
+            <div class="end_footer">
+                <img src="https://static1.medplusmart.com/medplusmart/assets/_648114a464440ed20580b10c930debe7_/new_theme/web/images/new/footer-return.svg"
+                    alt="">
+                <p>Return & Cancellation</p>
+            </div>
+            <div class="end_footer">
+                <img src="https://static1.medplusmart.com/medplusmart/assets/_18e40d90e742b9eb3da83bf859391a34_/new_theme/web/images/new/footer-term.svg"
+                    alt="">
+                <p>Terms & Conditions</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

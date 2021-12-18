@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+        background: linear-gradient(to left, crimson, white)
+    }
+
+    /* button-position-login */
+    .center {
+        position: absolute;
+        top: 5%;
+        left: 85%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* login-button */
+    .center button {
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #222;
+        background: linear-gradient(to right, white, white);
+        border: 2px tomato solid;
+        outline: none;
+        cursor: pointer;
+        border-radius: 15px;
+        width: 170px;
+        height: 50px;
+
+    }
+
+    .center button:hover {
+        border: tomato 3px solid;
+        background: lightcoral;
+        color: white;
+
+    }
+
+    /* login-page-popup */
+    .popup {
+        position: absolute;
+        top: -150%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.25);
+        width: 400px;
+        height: 400px;
+        padding: 20px 30px;
+        background: #fff;
+        box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        /* transition: top 0ms ease-in-out 200ms,
+                    opacity 200ms ease-in-out 0ms,
+                    transform 200ms ease-in-out 0ms; */
+    }
+
+    /* to activate pop-up */
+    .popup.active {
+        top: 50%;
+        opacity: 2;
+        transform: translate(-50%, -50%) scale(1);
+        transition: top 0ms ease-in-out 0ms,
+            opacity 500ms ease-in-out 500ms,
+            transform 500ms ease-in-out 500ms;
+    }
+
+    /* (x)close-button */
+    .popup .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 15px;
+        height: 20px;
+        /* background: #999; */
+        color: grey;
+        text-align: center;
+        line-height: 15px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    /* register */
+    .popup .form .h2 {
+        text-align: center;
+        color: #222;
+        margin: 10px 0px 20px;
+        font-size: 25px;
+    }
+
+    /* name-password */
+    .popup .form .form-element label {
+        font-size: 14px;
+        color: #222;
+    }
+
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"] {
+        margin-top: 5px;
+        display: block;
+        width: 90%;
+        padding: 10px;
+        outline: none;
+        border: 1px solid #aaa;
+        border-radius: none;
+    }
+
+    .popup .form .form-element input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    /* login-button */
+    .popup .form .form-element button {
+        width: 95%;
+        height: 40px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        background: lightpink;
+        color: #f5f5f5;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    /* href -tag */
+    .popup .form .form-element a {
+        display: block;
+        margin-right: 30px;
+        text-align: right;
+        font-size: 10px;
+        color: #1a79ca;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .popup .form .form-element .otp {
+        display: block;
+        margin-right: 30px;
+        text-align: left;
+        font-size: 10px;
+        color: #1a79ca;
+        text-decoration: none;
+        margin-top: -10px;
+        /* font-weight: 600; */
+    }
+
+    /* signin/////////////////////////////////////////////////////////////////////////////////// */
+
+    /* signup-page-popup */
+    .popup2 {
+        position: absolute;
+        top: -150%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.25);
+        width: 400px;
+        height: 500px;
+        padding: 20px 30px;
+        background: #fff;
+        box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+    }
+
+    /* to activate pop-up */
+    .popup2.active {
+        top: 50%;
+        opacity: 2;
+        transform: translate(-50%, -50%) scale(1);
+        transition: top 0ms ease-in-out 0ms,
+            opacity 100ms ease-in-out 500ms,
+            transform 100ms ease-in-out 500ms;
+    }
+
+    /* (x)close-button */
+    .popup2 .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 15px;
+        height: 15px;
+        /* background: #999; */
+        color: grey;
+        text-align: center;
+        line-height: 15px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    /* register */
+    .popup2 .form .h2 {
+        text-align: center;
+        color: #222;
+        margin: 10px 0px 20px;
+        font-size: 25px;
+    }
+
+    /* name-password */
+    .popup2 .form .form-element label {
+        font-size: 14px;
+        color: #222;
+    }
+
+    .popup2 .form .form-element input[type="text"],
+    .popup2 .form .form-element input[type="password"] {
+        margin-top: 5px;
+        margin-left: 15px;
+        display: block;
+        width: 40%;
+        padding: 10px;
+        outline: none;
+        border: 1px solid #aaa;
+        border-radius: 0px;
+    }
+
+    .popup2 .form .form-element input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    /* login-button */
+    .popup2 .form .form-element button {
+        width: 45%;
+        height: 30px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        background: lightpink;
+        color: #f5f5f5;
+        border-radius: 3px;
+        margin-left: 17px;
+        cursor: pointer;
+    }
+
+    /* href -tag */
+    .popup2 .form .form-element .pass {
+        display: block;
+        text-align: right;
+        font-size: 15px;
+        color: #1a79ca;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .popup p {
+        line-height: 3px;
+        font-size: 12px;
+        margin-top: -7px;
+    }
+
+    #signup {
+        color: lightcoral;
+        text-align: center;
+        margin-top: -21px;
+        margin-right: 45px;
+        font-size: 15px;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .msg {
+        color: grey;
+        font-size: 12px;
+    }
+
+    .pl {
+        text-align: left;
+        font-size: 12px;
+    }
+
+    .pr {
+        text-align: right;
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    span {
+        font-size: 12px;
+    }
+
+    .popup2 .form .form-element a {
+        display: block;
+
+        text-align: center;
+        color: lightcoral;
+        font-size: 14px;
+        text-decoration: none;
+        margin-top: 12px;
+        font-weight: 600;
+    }
+
+    .sp {
+        color: lightcoral;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="center">
+        <button id="show-login">login / SignUp</button>
+    </div>
+    <div class="popup">
+        <div class="close-btn">&#935;</div>
+        <div class="form">
+            <h5>Hello User,</h5>
+            <h2>Welcome to MedPlusMart</h2>
+            <p class="msg">Login with your registered mail id or phone number</p>
+            <br>
+            <div class="form-element">
+                <!-- <label for="email">Email</label> -->
+                <input type="text" id="lemail" placeholder="Email Id / Mobile No."><br>
+            </div><br>
+            <div class="form-element">
+                <!-- <label for="password">Password</label> -->
+                <input type="password" id="lpass" placeholder="Enter password">
+            </div><br>
+            <div class="form-element b">
+                <a href="#" class="pass">Forgot password</a>
+                <a href="#" class="otp">Login with Otp</a>
+            </div>
+            <br>
+            <div class="form-element">
+                <button id="login">Sign in</button>
+            </div><br>
+            <div class="form-element">
+                <br>
+                <p>Need to medPlus Mart?</p> <a href="#" id="signup">Sign up</a>
+            </div>
+        </div>
+    </div>
+    <div class="popup2">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h5>Hello User,</h5>
+            <h2>Welcome to MedPlusMart</h2>
+            <p class="msg">Login with your registered mail id or phone number</p>
+            <br>
+            <div class="form-element flex">
+                <!-- <label for="email">Email</label> -->
+                <input type="text" id="name" placeholder="Enter First name" required>
+                <input type="text" id="sname" placeholder="Enter Last name" required>
+            </div><br>
+            <div class="form-element flex">
+                <!-- <label for="email">mobile</label> -->
+                <input type="text" id="email" placeholder="Enter email" required>
+                <input type="text" id="mobile" placeholder="Enter mobile no" required>
+            </div><br>
+            <div class="form-element flex">
+                <!-- <label for="password">Password</label> -->
+                <input type="text" id="pass" placeholder="Enter pass" required>
+                <input type="text" id="cpass" placeholder="Enter confirm pass" required>
+            </div><br>
+            <div class="form-element flex">
+                <input type="checkbox" id="remember-me" aria-required="true">
+                <label for="remember-me"><span>I would like to be updated of new promotional offers.</span></label>
+            </div><br>
+            <div class="form-element">
+                <button id="register">Register</button>
+            </div><br>
+            <div class="form-element flex">
+                <p class="pl">By Signing up you agree to our <br>
+                    <span class="sp"><a href="#">T&C</a></span>
+                </p>
+                <p class="pr">Existing user of MedPlus? <br>
+                    <span class="sp" id="sp1" onclick=""><a href="login.html">Login</a></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    // login-popup 
+
+    document.querySelector("#show-login").addEventListener("click", function () {
+        document.querySelector(".popup").classList.add("active");
+    })
+
+    document.querySelector(".popup .close-btn").addEventListener("click", function () {
+        document.querySelector(".popup").classList.remove("active");
+    })
+
+    // signup-popup 
+
+    document.querySelector("#signup").addEventListener("click", function () {
+        document.querySelector(".popup2").classList.add("active");
+    })
+
+    document.querySelector(".popup2 .close-btn").addEventListener("click", function () {
+        document.querySelector(".popup2").classList.remove("active");
+        document.querySelector(".popup").classList.remove("active");
+    })
+
+    // Registration-script 
+
+    document.querySelector("#register").addEventListener("click", Register)
+    // var userData = [];
+    var userData = JSON.parse(localStorage.getItem("medPlusDatabase")) || [];
+    function Register() {
+        var name = document.querySelector("#name").value;
+        var surname = document.querySelector("#sname").value;
+        var email = document.querySelector("#email").value;
+        var mobile = document.querySelector("#mobile").value;
+        var password = document.querySelector("#pass").value;
+        var cpassword = document.querySelector("#cpass").value;
+        
+        if (name == "" || surname == "" || email == "" || mobile == "" || password == "" || cpassword == "") {
+            window.alert("Please enter the all the field");
+        }
+
+        else {
+            var userCard = {
+                Addname: name,
+                Addsurname: surname,
+                Addemail: email,
+                Addmobile: mobile,
+                Addpass: password,
+                Addcpass: cpassword
+            };
+            userData.push(userCard);
+            localStorage.setItem("medPlusDatabase", JSON.stringify(userData))
+            console.log(userData)
+        }
+    }
+
+    // login-script 
+
+    document.querySelector("#login").addEventListener("click", login)
+    var users = JSON.parse(localStorage.getItem("medPlusDatabase"));
+    function login() {
+        var email = document.querySelector("#lemail").value;
+        var password = document.querySelector("#lpass").value;
+
+        if (email == "" || password == "") {
+            window.alert("Please enter your email and password")
+        }
+        else {
+            for (var i = 0; i < users.length; i++) {
+                if (users[i].Addemail == email && users[i].Addpass == password) {
+                    console.log("Registerd users");
+                    window.location.href = "homepage.html"
+                }
+            }
+        }
+    }
+    // localStorage.removeItem(0);
+
+</script>
