@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDPLUS clone</title>
+    <style>
+        body{
+    font-family: sans-serif;
+}
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+#nav1{
+    display: flex;
+    border: 1px transparent grey;
+    margin-top: 0;
+    height: 40px;
+    width: 100%;
+    
+}
+button{
+    background-color: #c3191c;
+    color: white;
+    width: 120px;
+    height: 33px;
+    margin:7px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#number{
+    margin-left: 45%;
+    font-size: 14px;
+}
+#store{
+    margin-left: 3%;
+    font-size: 14px;
+}
+#download{
+    margin-left: 3%;
+    font-size: 14px;
+}
+i{
+    margin: 14px;
+    font-size: 20px;
+    
+}
+#login{
+    border: #c3191c 1px solid;
+    background: white;
+    color:#c3191c ;
+    margin-left: 65px;
+}
+#login:hover{
+    background:#c3191c ;
+    color: white;
+}
+#nav2{
+    display: flex;
+    position: sticky;
+    top: 0;
+    background: white;
+    width: 100%;
+    padding-top: 10px;
+}
+#searchbar{
+    border: 1px solid gray;
+    width: 700px;
+    height: 45px;
+    margin-left: 30px;
+    background: rgba(255, 255, 255, 0.049);
+    border-radius: 10px;
+}
+#option{
+  border: 0;
+  margin-left: 10px;
+  background: rgb(255, 253, 253);
+}
+#search{
+    border: 0;
+    margin-left: 10px;
+    width: 500px;
+    height: 23px;
+    margin-top: 0px;
+    background: rgb(255, 253, 253);
+}
+#upload{
+    background: #50dce7;
+    color: black;
+    margin-left: 30px;
+    margin-right: 18%;
+    height: 50px;
+    margin-top: 0;
+}
+#cart,#bell{
+    margin-right: 50px;
+}
+#address{
+    line-height: 8px;
+    font-size: 13px;
+}
+#nav3{
+    display: flex;
+}
+#line3,#menu{
+    margin-left: 23px;
+    line-height: 0px;
+    font-weight: 600;
+}
+#line3:hover{
+    color: rgb(192, 12, 12);
+    cursor: pointer;
+
+}
+#Health{
+    color: rgb(192, 12, 12);
+    margin-left: 15px;
+   line-height: 0px;
+}
+#image1{
+    width: 99%;
+    height: 250px;
+    margin: 10px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+#vitamins{
+    font-weight: 300;
+}
+/* #shop{
+    margin: 10px;
+} */
+#mainbox{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding: 22px;
+    height: 120px;
+    margin: 10px;
+    /* width: 1450px; */
+}
+#box{
+    display: grid;
+    grid-template-columns: repeat(4,250px);
+    grid-template-rows: 60px;
+    grid-gap: 30px;
+}
+#mainbox>#box>div{
+    border: 1px rgb(211, 208, 208) solid;
+    border-radius: 5px;
+    display: flex;
+     cursor: pointer;
+}
+/* :hover */
+#topoffers{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding: 15px;
+    margin-top: 29px;
+    margin-left: 16px;
+    /* width: 1450px; */
+}
+#offerdiv{
+    text-align: center;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    width: 260px;
+    height: 330px;
+    margin-left: 25px;
+}
+#offerprice{
+    color: red;
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+#addtocart{
+    background: rgb(232, 73, 73);
+    color: white;
+    border: red 1px solid;
+}
+#addtocart:hover{
+    background: rgb(206, 6, 6);
+    color: white;
+}
+#adsdiv{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: 260px;
+    margin: 18px;
+    grid-gap: 1%;
+    border: transparent 1px solid;
+}
+#ads1{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    margin-right: 22px;
+}
+#ads2{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    text-align: center;
+}
+#swiss{
+    height: 100%;
+    width: 92%;
+   
+}
+#adsimg{
+    display: flex;
+}
+.popbrands{
+    width: 16%;
+    height: 160px;
+    border-radius: 5%;
+    margin-right: 3px;
+}
+.popbrands:hover{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    cursor: pointer;
+}
+#pophead{
+    margin: 20px;
+    font-size: larger;
+}
+#medbox{
+    margin: 20px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding :20px
+}
+#medmain{
+    display: grid;
+    grid-template-columns: repeat(7,13%);
+    grid-template-rows: 350px;
+    grid-gap: 18px;
+    text-align: center;
+  
+}
+#medmain>div:hover{
+    border: slateblue 1px transparent;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+#medmain>div>img+p{
+   font-size: smaller;
+}
+#medmain>div>img+p+p{
+    margin-top: 45px;
+   color: rgb(214, 40, 9);
+   font-weight: 700;
+   margin-bottom: 5px;
+}
+#medmain>div>img+p+p>span{
+    color: black;
+    margin-left: 4px;
+    font-weight: 400;
+}
+#health{
+    margin: 16px;
+    width: 98%;
+}
+#downloadbox{
+    display: flex;
+    /* grid-template-columns: 100%;
+    grid-template-rows: 50%;
+    width: 98%; */
+    height: 450px;
+    grid-gap: 0px;
+    margin: 16px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+#mobile{
+   border: black 1px transparent;
+    width: 45%;
+    
+    
+}
+#mobile+img:hover{
+    border: black 1px transparent;
+    cursor: pointer;
+  
+    
+    /* margin-left: 20px; */
+}
+#contact{
+    display: flex;
+    margin: 15px;
+    line-height: 8px;
+    border: 1px transparent darkblue;
+}
+#contact>img+div{
+    padding-top: 15px;
+    margin: 16px;
+    border: darkblue 1px transparent;
+}
+#num:hover{
+     color: crimson;
+     cursor: pointer;
+     font-size: 19px;
+}
+#contact>img+div+div{
+
+    margin-left: 40%;
+}
+
+#input{
+    height: 40px;
+   margin-left: 20px;
+    width: 30%;
+}
+#input>input{
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+#input+button{
+    background: crimson;
+}
+#input+button:hover{
+    background: white;
+    color: crimson;
+    border:  1px grey solid;
+    cursor: pointer;
+}
+#aboutus{
+    color:rgb(48, 48, 236);
+    display:flex;
+    margin: 5px;
+}
+#aboutus>p{
+    margin: 15px;
+    font-weight: 500;
+}
+#aboutus>p:hover{
+    cursor: pointer;
+}
+#aboutus>img{
+    margin-left: 17%;
+}
+#info{
+    width: 100%;
+}
+#footer{
+    display: grid;
+    /* width: 100%; */
+    height: 60px;
+    /* margin: 0; */
+    grid-template-columns: repeat(6,16%);
+    background: #343a40;
+    /* border: 1px solid green; */
+}
+#footer>div{
+    margin-top: 10px;
+    display: flex;
+    color: white;
+    margin-left: 10px;
+
+}
+#footer>div>img{
+    margin-right: 7px;
+}
+#nav2>img{
+    border-radius: 50%;
+    height: 50px;
+    width: 60px;
+    margin-right: 10px;
+}
+    </style>
+      <script src="https://kit.fontawesome.com/dea4d8f016.js" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+   
+    
+    <div id="nav1">
+        <button><b>MedPlus</b>Mart</button>
+        <p id="number">Call 040-67006700 for help!</p>
+        <p id="store">Store Finder</p>
+        <p id="download">Download App</p>
+        <i class="fab fa-android"></i>
+        <i class="fab fa-apple"></i>
+        <button id="login">login/Sign up</button>
+        
+    </div>
+    <hr>
+    <div id="nav2">
+        <!-- <i class="fas fa-map-marker-alt"></i> -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF8Fp_gXH33INwcJxL6Zja5AUrObDGJwYL3g&usqp=CAU">
+         <div id="address">
+            <p>6/56,bhavani nagar,Hyderabad</p>
+            <p>Home Delivery & Store Pickup Available</p>
+         </div>
+         <div id="searchbar">
+             <select name="" id="option">
+                 <option value="">All Products</option>
+                 <option value="">General Store</option>
+                 <option value="">Pharmacy</option>
+             </select>
+             <input id="search" placeholder="Search for...general or pharma products">
+             <i class="fas fa-search"></i>
+         </div>
+         <button id="upload">Upload</button>
+         <i id="bell" class="far fa-bell"></i>
+         <i id="cart" class="fas fa-shopping-cart"></i>
+    </div>
+    <hr>
+    <div id="nav3">
+        <i id="menu" class="fas fa-bars"></i>
+        <h3 id="Health">Health Store</h3>
+        <h3 id="line3">Pharmacy</h3>
+        <h3 id="line3">Diagnostics</h3>
+        <h3 id="line3">FlexiRewards</h3>
+        <h3 id="line3">Promotions</h3>
+        <h3 id="line3">Healthy Life</h3>
+        <h3 id="line3">MedPlus Wallet</h3>
+    </div>
+    <img id="image1" src="https://static2.medplusmart.com/live/bannerImage/Mart/7b9731b1d84a845fac015aa77f633c5b.jpg"> 
+    <div id="mainbox">
+    <h2 id="shop">Shop by<span id="vitamins">  Vitamins & Supplements</span></h2>
+    <div id="box">
+        <div>
+            <i class="fas fa-prescription-bottle-alt"></i>
+            <p>Sports Supplements</p>
+        </div>
+        <div><i class="fas fa-prescription-bottle-alt"></i>
+            <p>Vitamins & Minerals</p></div>
+        <div><i class="fas fa-prescription-bottle-alt"></i>
+            <p>Herbal Supplements</p></div>
+        <div><i class="fas fa-prescription-bottle-alt"></i>
+            <p>Jamieson</p></div>
+        </div>
+    </div>
+    <div id="topoffers">
+        <h2>Top Offers</h2>
+        <div id="offerdiv"  >
+            <img src="https://static2.medplusmart.com/products/_cbec5f_/LUPI0203_S.jpg">
+            <p>LUPIN LIFE BE ONE CAP</p>
+            <p id="offerprice">Rs. 155</p>
+            <button  onclick="window.location.href = 'shoppingcart.html' " id="addtocart">Add To Cart</button>
+        </div>
+    </div>
+    <div id="adsdiv">
+        <div id="ads1">
+            <p id="pophead">Popular Brands</p>
+            <div id="adsimg">
+                <img class="popbrands" src="https://static2.medplusmart.com/brandImages/jamieson.jpg?v=104" alt="">
+                <img class="popbrands" src="https://static2.medplusmart.com/brandImages/nutrimaxx.jpg?v=104" alt="">
+                <img class="popbrands" src="https://static2.medplusmart.com/brandImages/swisse-wellness.jpg?v=104" alt="">
+                <img class="popbrands" src="https://static2.medplusmart.com/brandImages/wynclark-nutrition.jpg?v=104" alt="">
+                <img class="popbrands" src="https://static2.medplusmart.com/brandImages/corcal.jpg?v=104" alt="">
+                <img class="popbrands" src="https://static2.medplusmart.com/brandImages/be-one.jpg?v=104" alt="">
+            </div>
+        </div>
+        <div id="ads2">
+            <img id="swiss" src="https://static2.medplusmart.com/live/bannerImage/Mart/6cae589dc7363dc6e6b7b78d9a6c8a31.jpg">
+        </div>
+    </div>
+    <div id="medbox">
+        <h2>Best Sellers</h2>
+        <div id="medmain">
+            <div>
+                <img src="https://static2.medplusmart.com/products/ARJU0001_S.jpg">
+                <p>HIMALAYA ARJUNA CAP 60S</p>
+                <p>Rs.180<span>(save upto 5%)</span></p>
+                <button id="addtocart">Add to Cart</button>
+            </div>
+            <div> <img src="https://static2.medplusmart.com/products/_266414_/AUTR0001_S.jpg">
+                <p>AUTRIN CAPSULE</p>
+                <p>Rs.149.82<span>(save upto 20%)</span></p>
+                <button id="addtocart">Add to Cart</button>
+            </div>
+            <div>
+                <img src="https://static2.medplusmart.com/products/_81c3b5_/A_TO0002_S.jpg">
+                <p>A TO Z GOLD TABLET</p>
+                <p>Rs.180<span>(save upto 20%)</span></p>
+                <button id="addtocart">Add to Cart</button>
+            </div>
+            <div>
+                <img src="https://static2.medplusmart.com/products/_cf6293_/A_TO0006_S.jpg">
+                <p>A TO Z NS TABLET</p>
+                <p>Rs.125<span>(save upto 20%)</span></p>
+                <button id="addtocart">Add to Cart</button>
+            </div>
+            <div>
+                <img src="https://static2.medplusmart.com/products/_c21efa_/BECO0005_S.jpg">
+                <p>BECOSULES CAPSULE</p>
+                <p>Rs.45.67<span>(save upto 20%)</span></p>
+                <button id="addtocart">Add to Cart</button>
+            </div>
+            <div>
+                <img src="https://static2.medplusmart.com/products/_94f4d7_/BECO0008_S.jpg">
+                <p>BECOSULES Z CAPSULES</p>
+                <p>Rs 45.96<span>(save upto 20%)</span></p>
+                <button id="addtocart">Add to Cart</button>
+            </div>
+            <div>
+                <img src="https://static2.medplusmart.com/products/_a3d28c_/BECO0009_S.jpg">
+                <p>BECOZINIC CAPSULE</p>
+                <p>Rs.47.19<span>(save upto 20%)</span></p>
+                <button id="addtocart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <img id="health" src="https://static2.medplusmart.com/live/bannerImage/Mart/4201da37be56c796baa9c847f1aef982.jpg"> 
+    <div id="downloadbox">
+        <img id="mobile" src="https://static1.medplusmart.com/medplusmart/assets/_3649eddcab909706a1c11a0b62ddd161_/new_theme/web/images/new/download-app.png" alt="">
+        <img id="download" src="download.png">
+    </div>
+     <div id="contact">
+    <img src="https://static1.medplusmart.com/medplusmart/assets/_a34d265f3ea369c0259f6cf98563a642_/new_theme/web/images/call.svg" alt="">
+    <div>
+    <span<p>Need any help?</p></span>
+    <p id="num">040-67006700</p>
+    </div>
+    <div id="subscribe">
+        <p>Subscribe for</p>
+        <h3>Latest Offers</h3>
+    </div>
+    <div id="input">
+        <input type="text" placeholder="Your email address here">
+        <hr>
+    </div>
+    <button>SUBSCRIBE</button>
+    </div>
+    <div id="aboutus">
+        <p>About Us </p>
+        <p>FAQs </p>
+        <p> Locate A MedPlus Store</p>
+        <p>Track Orders</p>
+        <p> Browse All Brands</p>
+        <p>Customer Feedback</p>
+        <p>  Community Delivery</p>
+        <p> Bulk Order</p>
+        <p> Contact Us</p>
+        <img src="https://www.medplusmart.com/new_theme/web/images/xsiteseal_gd_3_h_l_m.png.pagespeed.ic.UUaIsQTtFt.webp">
+     
+    </div>
+    <hr>
+    <img src="payment.png">
+    <img id="info" src="desc.png">
+    <img id="info" src="followus.png">
+    <div id="footer">
+        <div>
+            <img src="https://static1.medplusmart.com/medplusmart/assets/_7ce28e4d38d5831f8b79ccb074f7efda_/new_theme/web/images/new/bulk-order.svg">
+            <p>Bulk Order</p>
+        </div>
+        <div>
+            <img src="https://static1.medplusmart.com/medplusmart/assets/_3f6749457ccb366054e8b4730031d82a_/new_theme/web/images/new/footer-community.svg">
+            <p>Community Delivery</p>
+        </div>
+        <div>
+            <img src="https://static1.medplusmart.com/medplusmart/assets/_ece1fc48e014048f8d5cdf497e01b7d4_/new_theme/web/images/new/sitemap.svg">
+            <p>Sitemap</p> 
+        </div>
+        <div>
+            <img src="https://static1.medplusmart.com/medplusmart/assets/_9e669b497a0681ed24b8d7ba7e1b8378_/new_theme/web/images/new/privacy.svg">
+            <p>Privacy</p> 
+
+        </div>
+        <div>
+            <img src="https://static1.medplusmart.com/medplusmart/assets/_648114a464440ed20580b10c930debe7_/new_theme/web/images/new/footer-return.svg">
+            <p>Returns & Cancellations</p> 
+        </div>
+        <div> 
+            <img src="https://static1.medplusmart.com/medplusmart/assets/_18e40d90e742b9eb3da83bf859391a34_/new_theme/web/images/new/footer-term.svg">
+            <p>Terms & Conditions</p> 
+        </div>
+    </div>
+</body>
+</html>
