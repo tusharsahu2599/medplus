@@ -7,6 +7,7 @@
     <style>
         *{
             font-family: 'Roboto', sans-serif;
+           
         }
   #shopping{
      
@@ -50,6 +51,8 @@ div>div{
     
     margin-right: 10px;
 }
+
+/* shopping delivery payment btn */
 #count,#countd{
     border-radius: 55%;
     margin-right: 10px;
@@ -302,6 +305,7 @@ div>div{
     
    
 }
+
 .btnlook:hover{
     background-color: rgb(209,46,46);
    color:white;
@@ -340,6 +344,7 @@ div>div{
 </head>
 <body>
    <div id=  "shopping">
+    <!-- top div is first nav -->
        <div id ="topdiv">
            <div id = "medicon"><b>MedPlus</b><SPAN>Mart</SPAN></div>
            <div>
@@ -351,9 +356,12 @@ div>div{
                    height=60%;
                    alt= "account"/>
                </div>
-              
+            
            </div>
         </div> 
+          <!-- topdiv is ending here -->
+
+          <!-- second div is starting here -->
            <div id = "secdiv" >
                <div id ="location">
                   <div> <img src = "https://t4.ftcdn.net/jpg/02/72/89/67/240_F_272896745_tlTivOH81qWIVzz34KqFGm8LO3N9hMYQ.jpg"
@@ -377,6 +385,7 @@ div>div{
                             Payment</div>
            </div>
         </div>
+        <!-- secdiv is ending here -->
         <div id = "thirdiv">
             <div id = "product" style ="display:block;">
                 <div id ="homedel">Home Delivery Options</div>
@@ -452,9 +461,9 @@ alt="get direction"/>
  </div>
 <div id = "justifyfooter">
  <footer class = "footer featurefooter">
-     <div class = "btnlook">Back</div>
+     <div class = "btnlook" id = "btn1">Back</div>
      <!-- we have to link th shopping cart page  -->
-     <div class = "btnlook">Proceed</div>
+     <div class = "btnlook"  id = "btn2">Proceed</div>
      <!-- we have to add payment page with proceed -->
  </footer>
 </div>
@@ -462,3 +471,17 @@ alt="get direction"/>
 </body>
 
 </html>
+<script>
+// add shopping cart page
+document.querySelector("#btn1").addEventListener("click",function(){
+    window.location.href = "shoppingcart.html";
+})
+// add payment page here
+document.querySelector("#btn2").addEventListener("click",function(){
+    window.location.href= "project.html";
+})
+// on changing address
+document.querySelector("#addaddres").addEventListener("click",function(){
+    window.location.href = "changeaddress.html";
+})
+</script>
