@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login/signup</title>
 </head>
 <style>
     body {
@@ -371,7 +371,7 @@
                     <span class="sp"><a href="#">T&C</a></span>
                 </p>
                 <p class="pr">Existing user of MedPlus? <br>
-                    <span class="sp" id="sp1" onclick=""><a href="login.html">Login</a></span>
+                <span class="sp" id="login"><a href="login.html">Login</a></span>
                 </p>
             </div>
         </div>
@@ -400,7 +400,10 @@
 
     document.querySelector(".popup2 .close-btn").addEventListener("click", function () {
         document.querySelector(".popup2").classList.remove("active");
-        // document.querySelector(".popup").classList.remove("active");
+        document.querySelector(".popup").classList.remove("active");
+    })
+    document.querySelector("#login").addEventListener("click", function () {
+        document.querySelector(".popup").classList.add("active");
     })
 
     // Registration-script 
