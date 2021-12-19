@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Dancing Script", cursive;
+      }
+     
+      #thankyou_page {
+        border: 4px solid #E93049;
+        width: 60%;
+        margin: auto;
+        margin-top: 130px;
+        border-radius: 15px;
+        padding: 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+      }
+      img {
+        width: 150px;
+        height: 150px;
+        margin-left: 43%;
+        margin-bottom: 30px;
+      }
+     
+      .info {
+        text-align: center;
+      }
+      h1 {
+        font-size: 50px;
+      }
+      p {
+        color: rgb(168, 168, 168);
+        font-size: 19px;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+      button {
+        font-size: 20px;
+        margin-top: 80px;
+        width: 170px;
+        height: 50px;
+        border: none;
+        border-radius: 30px;
+        color: white;
+        background-color: Crimson;
+        padding: 10px 0px;
+        font-family: "Roboto", sans-serif;
+      }
+      button:hover{
+          cursor: pointer;
+          background-color: rgb(246, 148, 164);
+      }
+      .info>:nth-child(4){
+          color: rgb(168, 168, 168);
+          font-size: 25px;
+          margin-top: 100px;
+          font-family: "Roboto", sans-serif;
+        
+      }
+      span{
+          color: black;
+          font-family: "Roboto", sans-serif;
+cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="thankyou_page">
+      <img src="file:///C:/Users/hp/Downloads/Thankyou%20Page/Thankyou%20Page/mail.jpg" alt="" />
+      <div class="info">
+        <h1>ThankYou, enjoy !</h1>
+        <p>we've sent the download in your inbox</p>
+        <button id = "homepage" >&larr; Back To Home</button>
+        <p>if you have any issues <span>Contact Us</span></p>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+document.querySelector("#homepage").addEventListener("click", backtohome)
+
+function backtohome(){
+    window.location.href="homepage.html"
+}
+
+
+
+</script>

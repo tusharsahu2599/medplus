@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="payment.css" />
+    <title>Document</title>
+    <style>
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.color{
+    font-size: 12px;
+    color: rgb(112, 112, 112);
+}
+header{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 1px 1px 8px rgba(88, 88, 88, 0.363);
+    background: #fff;
+}
+header .up{
+    position: relative;
+    margin: 5px 0 0 15px;
+}
+header .up div{
+    height: 30px;
+    width: 130px;
+    background: rgb(211, 2, 2);
+    color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .down{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header .down .left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 270px;
+    height: 50px;
+    line-height: 0.1;
+    margin-left: 10px;
+}
+header .down .right{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-around;
+}
+header .down .right div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+header .down .right .d{
+    height: 30px;
+    width: 30px;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+main{
+    width: 100%;
+    position: relative;
+    background: rgba(233, 233, 233, 0.247);
+    padding-top: 15px;
+}
+main section{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+main section .le{
+    width: 70%;
+    position: relative;
+    box-shadow: 1px 1px 3px rgba(155, 155, 155, 0.425);
+    background: #fff;
+}
+main section .le .do{
+    display: flex;
+    flex-direction: row;
+}
+main section .le .do .card{
+    border: 1px solid rgba(182, 182, 182, 0.664);
+    padding: 10px;
+    width: 370px;
+    margin: 16px;
+    height: 70px;
+    cursor: pointer;
+}
+main section .le .do .card .up{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 0.1;
+}
+main section .le .do .card .right{
+    height: 30px;
+    width: 50px;
+    background: red;
+    border-radius: 4px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main section .ri{
+    width: 28%;
+    position: relative;
+}
+main section .ri .up{
+    border: 1px dashed green;
+    background: #fff;
+}
+main section .ri .up p{
+    margin: 10px;
+}
+main section .ri .up .d1{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    line-height: 0.7;
+}
+main section .ri .up .d1 .l{
+    width: 10px;
+    height: 10px;
+    margin: 15px 10px 0 10px;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 199, 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main section .ri .up .d1 .l div{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    box-sizing: content-box;
+    background: rgb(0, 199, 10);
+}
+.card img{
+width: 100px;
+z-index: 100;
+
+}
+
+
+
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="up">
+        <div><h3>MedPlus</h3> Mart</div>
+      </div>
+      <div class="down">
+        <div class="left">
+          <div class="l"></div>
+          <div class="r">
+            <p><b>6/56 Bhawani Nagar, Hyderabad</b></p>
+            <p class="color">Home Delivery & Store Pickup Available</p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="d1">
+            <div class="d">1</div>
+            <p>Shopping Cart</p>
+          </div>
+          <div class="d2">
+            <div class="d">2</div>
+            <p>Delivery Details</p>
+          </div>
+          <div class="d3">
+            <div class="d">3</div>
+            <p>Promotions & Review</p>
+          </div>
+          <div class="d4">
+            <div class="d" style="background: rgb(14, 247, 14)">4</div>
+            <p>Payment</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="le">
+          <p style="margin-left: 15px">Payment Option</p>
+          <hr />
+          <div class="do">
+            <div class="leftt">
+              <div class="creaditcard card">
+                <div class="up">
+                  <!-- <p>Creadit Card</p> -->
+                  <img
+                    src="https://static2.medplusmart.com/live/webpwa/images/credit-card-logo-cssbg.svg"
+                    alt=""
+                  />
+                  <div class="right">Pay</div>
+                </div>
+                <div class="down">
+                  <div class="left">
+                    <p class="color">All Credit card are Accepted</p>
+                  </div>
+                </div>
+              </div>
+              <div class="net card">
+                <div class="up">
+                  <!-- <p>Net Banking</p> -->
+                  <img
+                    src="https://static2.medplusmart.com/live/webpwa/images/net-banking-logo-cssbg.svg"
+                    alt=""
+                  />
+                  <div class="right">Pay</div>
+                </div>
+                <div class="down">
+                  <div class="left">
+                    <p class="color">All Bank are Accepted</p>
+                  </div>
+                </div>
+              </div>
+              <div class="paytm card">
+                <div class="up">
+                  <!-- <p>Paytm</p> -->
+                  <img
+                    src="https://static2.medplusmart.com/live/webpwa/images/paytm-logo2x.e9a371796d45f92814111d59f5759863.png"
+                    alt=""
+                  />
+                  <div class="right">Pay</div>
+                </div>
+                <div class="down">
+                  <div class="left">
+                    <p class="color">
+                      Wallet / Credit card / Debit card / Net Banking / UPI
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="kwik card">
+                <div class="up">
+                  <!-- <p>MobiKwik</p> -->
+                  <img
+                    src="https://static2.medplusmart.com/live/webpwa/images/mobikwik-logo2x.f2e95bb96927bb9330c3e117735333d7.png"
+                    alt=""
+                  />
+                  <div class="right">Pay</div>
+                </div>
+                <div class="down">
+                  <div class="left">
+                    <p class="color">
+                      Wallet / Credit card / Debit card / Net Banking / UPI
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rightt">
+              <div class="debitcard card" >
+                <div class="up">
+                  <!-- <p>Debit Card</p> -->
+                  <img
+                    src="https://static2.medplusmart.com/live/webpwa/images/debit-card-logo-cssbg.svg"
+                    alt=""
+                  />
+                  <div class="right" onclick = "window.location.href= 'card.html' ">Pay</div>
+                </div>
+                <div class="down">
+                  <div class="left">
+                    <p class="color">All Debit card are Accepted</p>
+                  </div>
+                </div>
+              </div>
+              <div class="upi card">
+                <div class="up">
+                  <!-- <p>UPI</p> -->
+                  <img
+                    src="https://static2.medplusmart.com/live/webpwa/images/upi-payments-logo2x.b38ac475bde3f343a74b3100d614b3dd.png"
+                    alt=""
+                  />
+                  <div class="right">Pay</div>
+                </div>
+                <div class="down">
+                  <div class="left">
+                    <p class="color">Google Pay / UPI</p>
+                  </div>
+                </div>
+              </div>
+              <div class="phonepay card">
+                <div class="up">
+                  <!-- <p>Phone Pay</p> -->
+                  <img
+                    src="https://static2.medplusmart.com/live/webpwa/images/phone-pe-logo2x.724ddd73b0e5b5e1fb5032074491f1df.png"
+                    alt=""
+                  />
+                  <div class="right" >Pay</div>
+                </div>
+                <div class="down">
+                  <div class="left">
+                    <p class="color">
+                      Wallet / Credit card / Debit card / Net Banking / UPI
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ri">
+          <div class="up">
+            <p>Selected Offers</p>
+            <hr />
+            <div class="d1">
+              <div class="l">
+                <div></div>
+              </div>
+              <div class="r">
+                <h2 style="color: red">10% off on medicine</h2>
+                <p class="color">10% on perception medicine</p>
+                <p class="color">(Min order value Rs 200)</p>
+              </div>
+            </div>
+            <hr />
+            <p>
+              <span style="color: red">Click here </span> &nbsp; to change the
+              offer
+            </p>
+          </div>
+          <div class="mid">
+            <!-- write here -->
+          </div>
+          <div class="down">
+            <!-- write here -->
+            <!-- <div>
+            
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+    </main>
+    
+  </body>
+</html>
