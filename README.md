@@ -6,6 +6,12 @@ Here is this section there are two file named
 1)shoppingcart.html
 2)stylesheet.css
 
+
+In this Shoppingcart page language used -
+a)HTML
+
+b)CSS
+
 Combining both the files decribes the overall structure of medplusmart.com shopping cart page.
 
 Here the user land into this page when he/she orders any product or item from the website.
