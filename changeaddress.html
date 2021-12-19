@@ -16,7 +16,7 @@
       <label>Add New Address :</label>
       <textarea type = "text" name = "enter address" placeholder="Enter your address"></textarea>
       <label>Confirm Address</label><textarea name = "Description " palceholder= "Confirm Address"></textarea>
-      <button>Submit</button>
+      <button onclick = "window.location.href= 'delivery.html'  ">Submit</button>
   </form> 
 </body>
 </html>
@@ -25,6 +25,7 @@
 
 function mysubmit(event){
     event.preventDefault()
+    
     alert("Your Address has changed")
 }
 
