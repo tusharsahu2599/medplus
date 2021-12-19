@@ -1,0 +1,183 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.bigdiv {
+  overflow-y: scroll;
+  /* border: solid red; */
+  width: auto;
+  height: 600px;
+  display: grid;
+  margin-bottom: 10px;
+  padding: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+#left {
+  /* border: solid green; */
+  width: 740px;
+  height: 600px;
+  margin-left: 20px;
+  /* background-color: #ffffff; */
+}
+
+#right {
+  /* border: solid blue; */
+  width: 520px;
+  height: 600px;
+  margin-left: 20px;
+}
+#left > div {
+  /* border: solid rgb(78, 153, 34); */
+  width: 640px;
+  height: 250px;
+  margin-left: 20px;
+  padding: 20px;
+}
+#note {
+  width: 650px;
+  height: 81px;
+}
+
+button {
+  color: #e71c37;
+  background-color: #fcfcfc;
+  font-size: 19px;
+  /* border: 1px solid #e71c37; */
+  border-radius: 8px;
+  padding: 10px 25px;
+  cursor: pointer;
+  float: right;
+}
+button:hover {
+  color: #ffffff;
+  background-color: #e71c37;
+}
+select {
+  background-color: #fcfcfc;
+  padding: 10px 25px;
+}
+#delivery {
+  float: right;
+}
+
+/* right div  */
+
+.rewards {
+  background-color: #ffffff;
+  padding: 7px;
+  border: #08ce73 dotted;
+  width: 96.2%;
+  height: 54%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+#tored {
+  color: red;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+#flexi {
+  color: #1b74bb;
+  font-size: 20px;
+}
+#rewards {
+  color: #57585a;
+  font-size: 20px;
+}
+
+.cart {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 96.2%;
+  height: 40%;
+  margin-top: 15px;
+  padding: 7px;
+  background-color: #ffffff;
+}
+#togreen {
+  color: #3edeb0;
+}
+
+/* footer  */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  color: white;
+  text-align: center;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  height: 44px;
+}
+.footer > button {
+  float: right;
+  padding: 5px 20px;
+  margin: 8px;
+}
+
+#proceed {
+  background-color: #e71c37;
+  color: white;
+  padding: 6px 50px 6px 50px;
+}
+#CS {
+  padding: 6px 50px 6px 50px;
+}
+
+/* nav bar  */
+
+/* --------------------- */
+#navbar {
+  overflow: hidden;
+  background-color: #ffffff;
+  color: black;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.sticky {
+  /* position: sticky;
+  top: 0; */
+  width: 100%;
+  padding-top: 60px;
+}
+
+#onlynav {
+  background-color: #e71c37;
+  color: white;
+  padding: 10px 14px;
+}
+#navbar > p {
+  float: right;
+  padding-left: 10px;
+}
+
+.customer-logo {
+  width: 30px;
+  height: 30px;
+  float: right;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding-top: 14px;
+}
+
+/* ----------- */
+#second-nav {
+  /* border: solid green; */
+  width: auto;
+  height: 60px;
+  position: sticky;
+  top: 0;
+}
