@@ -73,7 +73,7 @@ body{
     padding: 10px 20px;
 }
 
-a{
+.a{
     background-color: blueviolet;
     color: white;
     text-align: center;
@@ -82,9 +82,10 @@ a{
     padding: 10px;
     font-size: 18px;
     transition: 0.5s;
+    border: 0;
 }
 
-a:hover{
+.a:hover{
     background-color: dodgerblue;
 }
 
@@ -101,13 +102,13 @@ a:hover{
             <div class="owner">
                 <h3>Owner</h3>
                 <div class="input-field">
-                    <input type="text">
+                    <input id="owner" type="text">
                 </div>
             </div>
             <div class="cvv">
                 <h3>CVV</h3>
                 <div class="input-field">
-                    <input type="password">
+                    <input id="cvv" type="password">
                 </div>
             </div>
         </div>
@@ -115,15 +116,15 @@ a:hover{
             <div class="card-number">
                 <h3>Card Number</h3>
                 <div class="input-field">
-                    <input type="text">
+                    <input id="card_number" type="number">
                 </div>
             </div>
         </div>
         <div class="third-row">
-            <h3>Card Number</h3>
+            <h3>Card Expire date</h3>
             <div class="selection">
                 <div class="date">
-                    <select name="months" id="months">
+                    <select id="exp" name="months" id="months">
                         <option value="Jan">Jan</option>
                         <option value="Feb">Feb</option>
                         <option value="Mar">Mar</option>
@@ -153,11 +154,23 @@ a:hover{
                 </div>
             </div>    
         </div>
-        <a href="thankyou.html" id = "click" >Confirm</a>
+        <!-- <id = "click" onclick="submit()" >Confirm</a> -->
+        <button class="a" id="confirm">confirm</button>
     </div>
 </body>
 </html>
+<script>
+    document.querySelector("#confirm").addEventListener("click",submit)
+    function submit(){
+        var owner = document.querySelector("#owner").value;
+        var cv = document.querySelector("#cvv").value;
+        var card = document.querySelector("#card_number").value;
 
-
-
-
+        if(owner=="" || cv=="" || card ==""){
+            window.alert("Please enter all the field")
+        }
+        else{
+        window.location.href = "thankyou.html"
+    }
+    }   
+</script>

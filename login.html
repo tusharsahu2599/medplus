@@ -400,7 +400,7 @@
 
     document.querySelector(".popup2 .close-btn").addEventListener("click", function () {
         document.querySelector(".popup2").classList.remove("active");
-        document.querySelector(".popup").classList.remove("active");
+        // document.querySelector(".popup").classList.remove("active");
     })
 
     // Registration-script 
@@ -452,9 +452,11 @@
                     console.log("Registerd users");
                     window.location.href = "homepage.html"
                 }
+                else{
+                    window.alert("Id not found go to signup page");
+                }
             }
         }
     }
     // localStorage.removeItem(0);
-
 </script>
