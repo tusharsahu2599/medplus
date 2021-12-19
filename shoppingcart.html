@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  </head>
+
+  <body>
+    <!-- nav bar -->
+    <div id="navbar">
+      <a class="active" href="javascript:void(0)">
+        <button id="onlynav">MedPlus Mart</button>
+      </a>
+      <p>Tushar ▼</p>
+      <img src="./user.png" class="customer-logo" />
+    </div>
+
+    <!-- second nav bar  -->
+    <div id="second-nav">
+      <img src="nav.png" alt="Nav-image" id="nav-image" />
+    </div>
+
+    <!-- big div  -->
+    <div class="bigdiv">
+      <div id="left">
+        <div>
+          Shopping Cart
+          <hr />
+          <img src="item.png" alt="image" /><b>LUPIN LIFE BE ONE CAP</b>
+          <span id="delivery">Delivery by Dec 19, 2021</span><br />
+          <span>10 Unit(s) / pack | MRP/Pack ₹ 155.00</span>
+          <p value="price">Total Price ₹ 155.00</p>
+          <select name="options" id="options">
+            <option value="quan1">Qty 1 (Packs)</option>
+            <option value="quan1">Qty 2 (Packs)</option>
+            <option value="quan1">Qty 3 (Packs)</option>
+            <option value="quan1">Qty 4 (Packs)</option>
+          </select>
+          <button type="reset" name="myButton" autofocus>🗑️ Remove</button>
+        </div>
+
+        <div>
+          <img id="note" src="./note1.png" />
+        </div>
+      </div>
+
+      <div id="right">
+        <div class="rewards">
+          <h4>Applicable Offers</h4>
+          <hr style="border-top: dotted 1px #ced4da" />
+          <p>Coupon code can be applied on review page before final checkout</p>
+          <hr style="border-top: dotted 1px #ced4da" />
+
+          <!-- radio buttons  -->
+
+          <form>
+            <input type="radio" id="10%off" name="cashback" checked />
+            <label><span id="tored"> 10% OFF on medicines</span></label>
+            <p>&nbsp &nbsp &nbsp &nbsp 10% on precription medicines</p>
+            <p>&nbsp &nbsp &nbsp &nbsp Minimum order on Rs.200</p>
+
+            <input type="radio" id="flexrewards" name="flexi" />
+            <label
+              ><span id="flexi">Flexi</span
+              ><span id="rewards">Rewards</span></label
+            ><br />
+            <p>&nbsp &nbsp &nbsp &nbsp 10% points on precription medicines</p>
+          </form>
+        </div>
+
+        <!-- cart summary div  -->
+        <div class="cart">
+          <h4>Cart Summary</h4>
+          <hr />
+          <p>
+            No. Of Items &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            &nbsp 1
+          </p>
+          <p>
+            MRP Total &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            &nbsp ₹155.00
+          </p>
+          <p id="togreen">
+            Total Amount Saved &nbsp &nbsp &nbsp &nbsp &nbsp ₹25.00
+          </p>
+          <hr />
+          <p>Total Amount to be Paid &nbsp &nbsp &nbsp ₹130.00</p>
+        </div>
+      </div>
+    </div>
+    <!-- footer  -->
+
+    <div class="footer">
+      <button id="CS"   onclick="window.location.href='homepage.html'">
+        Continue Shopping
+      </button>
+      <button id="proceed" onclick="window.location.href='delivery.html'" >Proceed</button>
+    </div>
+  </body>
+</html>
